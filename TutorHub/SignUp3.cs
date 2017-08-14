@@ -37,17 +37,27 @@ namespace TutorHub
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
-            //SignUp2.Instance.BringToFront();
+            signUp.SignUp2BringToFront();
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            
-            HomePage.Instance.BringToFront();
-            //SignUp1.Instance.Hide();
-            //SignUp2.Instance.Hide();
-            this.Hide();
-            //SignUp.Instance.Hide();
+            int varify = 0001;
+
+
+            if (varify != int.Parse(metroTextBox1.Text))
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Code did not matched, enter the code sent in you mail");
+            }
+
+            else
+            {
+                HomePage.Instance.BringToFront();
+                //SignUp1.Instance.Hide();
+                //SignUp2.Instance.Hide();
+                signUp.Hide();
+                //SignUp.Instance.Hide();
+            }
 
         }
     }
