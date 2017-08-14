@@ -8,6 +8,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Security.Cryptography;
 using System.Runtime.InteropServices;
+using Newtonsoft.Json.Linq;
 
 namespace TutorHub
 {
@@ -15,7 +16,7 @@ namespace TutorHub
     {
         //static void Main(string[] args)
         //{
-            
+
         //    Console.ReadKey();
 
         //    Program p = new Program();
@@ -25,11 +26,17 @@ namespace TutorHub
         //}
 
         // client configuration
+        //SignUp signUp;
         const string clientID = "663098612846-imsf7iqn33s3cf25f9upo0fu7sk3t318.apps.googleusercontent.com";
         const string clientSecret = "ScweQlkpdd5voOXQ9gzIJNz-";
         const string authorizationEndpoint = "https://accounts.google.com/o/oauth2/v2/auth";
         const string tokenEndpoint = "https://www.googleapis.com/oauth2/v4/token";
         const string userInfoEndpoint = "https://www.googleapis.com/oauth2/v3/userinfo";
+
+        //public GoogleClass(SignUp sign)
+        //{
+        //    this.signUp = signUp;
+        //}
 
         // ref http://stackoverflow.com/a/3978040
         public static int GetRandomUnusedPort()
@@ -41,7 +48,7 @@ namespace TutorHub
             return port;
         }
 
-        public async void doOAuth()
+        public async void doOAuth(SignUp signUp)
         {
             // Generates state and PKCE values.
             string state = randomDataBase64url(32);
@@ -87,6 +94,9 @@ namespace TutorHub
             {
                 responseOutput.Close();
                 http.Stop();
+                HomePage.Instance.BringToFront();
+
+                signUp.Hide();
                 //Console.WriteLine("HTTP server stopped.");
             });
 
@@ -203,6 +213,11 @@ namespace TutorHub
             {
                 // reads response body
                 string userinfoResponseText = await userinfoResponseReader.ReadToEndAsync();
+
+                //var obj = JsonConvert.DeserializeObject<RootObject>(userinfoResponseText);
+                dynamic obj = JObject.Parse(userinfoResponseText);
+
+                //Login.Instance.txtLoginPass.Text = (string)obj.name; ;
                 //output(userinfoResponseText);
                 //SignUp1.Instance.txtUserName.Text=userinfoResponseText;
             }
@@ -272,7 +287,7 @@ namespace TutorHub
 
         public void BringConsoleToFront()
         {
-            SetForegroundWindow(GetConsoleWindow());
+            
         }
 
     }

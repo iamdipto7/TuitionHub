@@ -34,6 +34,7 @@ namespace TutorHub
 
         private void profileTile_Click(object sender, EventArgs e)
         {
+            ViewProfile.Instance.lblName.Text = Form1.Instance.LoggedInUser.UserName;
             ViewProfile.Instance.BringToFront();
         }
 

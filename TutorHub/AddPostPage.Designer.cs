@@ -99,7 +99,7 @@
             this.metroLabel5.Location = new System.Drawing.Point(514, 163);
             this.metroLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(132, 36);
+            this.metroLabel5.Size = new System.Drawing.Size(132, 30);
             this.metroLabel5.TabIndex = 4;
             this.metroLabel5.Text = "Course";
             this.metroLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
