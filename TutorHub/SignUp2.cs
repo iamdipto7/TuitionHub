@@ -38,13 +38,33 @@ namespace TutorHub
         private void metroButton2_Click(object sender, EventArgs e)
         {
             //SignUp3.Instance.BringToFront();
+
+            string confirmPass = txtConfirmPass.Text;
+            signUp.NewUser.Password = txtPass.Text;
+            if( confirmPass.Equals(signUp.NewUser.Password) && signUp.NewUser.Password.Length >= 8 )
+            {
+                signUp.SignUp3BringToFront();
+
+            }
+            else
+            {
+                MetroFramework.MetroMessageBox.Show(this, "password must be eight charater long and both has to be same");
+            }
+
+
+
+           
+
+
+
+
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
             //btn previous on sign up 2 page to go sign up 1
             
-            //SignUp1.Instance.BringToFront();
+            signUp.SignUp1BringToFront();
         }
     }
 }

@@ -43,14 +43,29 @@ namespace TutorHub
         private void btnNextSignUp1_Click(object sender, EventArgs e)
         {
 
+
             signUp.NewUser.UserName = txtUserName.Text;
             signUp.NewUser.Email = txtEmail.Text;
 
+            if (signUp.NewUser.UserName.Equals("") || signUp.NewUser.Email.Equals("") || signUp.NewUser.Email.StartsWith(" ") || signUp.NewUser.UserName.StartsWith(" ") || signUp.NewUser.Email.Contains(" "))
+            {
+                MetroFramework.MetroMessageBox.Show(this, "User Name or Email can not be empty");
 
-            //Console.WriteLine(SignUp.Instance.NewUser.UserName+ SignUp.Instance.NewUser.Email);
+            }
 
-            //SignUp2.Instance.txtPass.Text = SignUp.Instance.NewUser.UserName;
-            //SignUp2.Instance.BringToFront();
+            else
+            {
+
+                signUp.SignUp2BringToFront();
+
+            }
+
+
+
+
+
+
+            
         }
 
         private void btnGoogle_Click(object sender, EventArgs e)
