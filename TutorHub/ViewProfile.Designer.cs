@@ -37,9 +37,9 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.lblName = new MetroFramework.Controls.MetroLabel();
+            this.lblDOB = new MetroFramework.Controls.MetroLabel();
+            this.lblGender = new MetroFramework.Controls.MetroLabel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
@@ -172,9 +172,9 @@
             this.tableLayoutPanel4.Controls.Add(this.metroLabel2, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.metroLabel3, 0, 2);
             this.tableLayoutPanel4.Controls.Add(this.metroLabel4, 0, 3);
-            this.tableLayoutPanel4.Controls.Add(this.metroLabel5, 1, 1);
-            this.tableLayoutPanel4.Controls.Add(this.metroLabel6, 1, 2);
-            this.tableLayoutPanel4.Controls.Add(this.metroLabel7, 1, 3);
+            this.tableLayoutPanel4.Controls.Add(this.lblName, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.lblDOB, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.lblGender, 1, 3);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(374, 4);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
@@ -227,44 +227,44 @@
             this.metroLabel4.Text = "Gender";
             this.metroLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // metroLabel5
+            // lblName
             // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel5.Location = new System.Drawing.Point(369, 98);
-            this.metroLabel5.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(461, 69);
-            this.metroLabel5.TabIndex = 3;
-            this.metroLabel5.Text = "bakiforhad";
-            this.metroLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblName.AutoSize = true;
+            this.lblName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblName.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblName.Location = new System.Drawing.Point(369, 98);
+            this.lblName.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(461, 69);
+            this.lblName.TabIndex = 3;
+            this.lblName.Text = "bakiforhad";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // metroLabel6
+            // lblDOB
             // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel6.Location = new System.Drawing.Point(369, 217);
-            this.metroLabel6.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(461, 67);
-            this.metroLabel6.TabIndex = 4;
-            this.metroLabel6.Text = "7th feb 1996";
-            this.metroLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDOB.AutoSize = true;
+            this.lblDOB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblDOB.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblDOB.Location = new System.Drawing.Point(369, 217);
+            this.lblDOB.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
+            this.lblDOB.Name = "lblDOB";
+            this.lblDOB.Size = new System.Drawing.Size(461, 67);
+            this.lblDOB.TabIndex = 4;
+            this.lblDOB.Text = "7th feb 1996";
+            this.lblDOB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // metroLabel7
+            // lblGender
             // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel7.Location = new System.Drawing.Point(369, 334);
-            this.metroLabel7.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(461, 69);
-            this.metroLabel7.TabIndex = 5;
-            this.metroLabel7.Text = "Male\r\n";
-            this.metroLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblGender.AutoSize = true;
+            this.lblGender.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblGender.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblGender.Location = new System.Drawing.Point(369, 334);
+            this.lblGender.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(461, 69);
+            this.lblGender.TabIndex = 5;
+            this.lblGender.Text = "Male\r\n";
+            this.lblGender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel5
             // 
@@ -646,6 +646,7 @@
             this.metroLabel1.TabIndex = 1;
             this.metroLabel1.Text = "navbar";
             this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel1.Click += new System.EventHandler(this.metroLabel1_Click);
             // 
             // ViewProfile
             // 
@@ -655,6 +656,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ViewProfile";
             this.Size = new System.Drawing.Size(1265, 640);
+            this.Load += new System.EventHandler(this.ViewProfile_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -694,9 +696,8 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroLabel metroLabel6;
-        private MetroFramework.Controls.MetroLabel metroLabel7;
+        private MetroFramework.Controls.MetroLabel lblDOB;
+        private MetroFramework.Controls.MetroLabel lblGender;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
@@ -718,5 +719,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel21;
         private MetroFramework.Controls.MetroLabel metroLabel22;
         private MetroFramework.Controls.MetroLabel metroLabel23;
+        public MetroFramework.Controls.MetroLabel lblName;
     }
 }

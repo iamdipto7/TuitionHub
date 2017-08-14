@@ -12,6 +12,9 @@ namespace TutorHub
 {
     public partial class Form1 : MetroFramework.Forms.MetroForm
     {
+
+        public User LoggedInUser;
+
         private static Form1 instance;
         public static Form1 Instance
         {
@@ -22,10 +25,21 @@ namespace TutorHub
                 return instance;
             }
         }
+
+        //private static Form1 instanceValued;
+        //public static Form1 InstanceValued
+        //{
+        //    get
+        //    {
+        //        return instanceValued;
+        //    }
+        //}
         public Form1()
         {
             InitializeComponent();
         }
+
+
 
         private void Form1_Load(object sender, EventArgs e)
         {

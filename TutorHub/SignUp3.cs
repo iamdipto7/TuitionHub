@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Mail;
+using System.Net;
 
 namespace TutorHub
 {
     public partial class SignUp3 : UserControl
     {
+        int varifyCode;
+        Timer timer = new Timer();
         //private static SignUp3 instance;
         //public static SignUp3 Instance
         //{
@@ -42,24 +46,59 @@ namespace TutorHub
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            int varify = 0001;
+            
+            //complete signup button to go home page
+            
 
-
-            if (varify != int.Parse(metroTextBox1.Text))
+            if("TH-"+Convert.ToString(varifyCode)==txtVerification.Text)
             {
-                MetroFramework.MetroMessageBox.Show(this, "Code did not matched, enter the code sent in you mail");
-            }
+                TutorHubDataContext tdc = new TutorHubDataContext(signUp.connection);
 
+                tdc.Users.InsertOnSubmit(signUp.NewUser);
+                tdc.SubmitChanges();
+                HomePage.Instance.BringToFront();
+                signUp.Hide();
+            }
             else
             {
-                HomePage.Instance.BringToFront();
-                //SignUp1.Instance.Hide();
-                //SignUp2.Instance.Hide();
-                signUp.Hide();
-                
-                //SignUp.Instance.Hide();
+                MetroFramework.MetroMessageBox.Show(this, "Verification Failed");
             }
 
+        }
+
+        private void btnSendVerification_Click(object sender, EventArgs e)
+        {
+            lblVerification.Text = "Varification code has been sent to your email. varify yourself.";
+            btnSendVerification.Text = "Resend Verification Code";
+            txtVerification.Enabled = true;
+            txtVerification.Text = "TH-";
+
+            timer.Interval = 60000;
+            timer.Tick += timer_Tick;
+            timer.Start();
+            btnSendVerification.Enabled = false;
+
+            Random rnd = new Random();
+
+            varifyCode = rnd.Next(100000, 999999);
+
+            var message = new MailMessage("tutorhubsystem@gmail.com", signUp.NewUser.Email);
+            message.Subject = "Verification Code [No Reply]";
+            message.Body = "TH-"+Convert.ToString(varifyCode);
+
+            using (SmtpClient mailer = new SmtpClient("smtp.gmail.com", 587))
+            {
+                mailer.Credentials = new NetworkCredential("tutorhubsystem@gmail.com", "c#project");
+                mailer.EnableSsl = true;
+                mailer.Send(message);
+            }
+
+        }
+
+        void timer_Tick(object sender, System.EventArgs e)
+        {
+            btnSendVerification.Enabled = true;
+            timer.Stop();
         }
     }
 }

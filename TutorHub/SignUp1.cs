@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace TutorHub
 {
@@ -24,6 +25,7 @@ namespace TutorHub
         //}
 
         SignUp signUp;
+        string emailPattern = @"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*"+ "@"+ @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$";
         public SignUp1()
         {
             InitializeComponent();
@@ -42,6 +44,9 @@ namespace TutorHub
 
         private void btnNextSignUp1_Click(object sender, EventArgs e)
         {
+            TutorHubDataContext tdc = new TutorHubDataContext(signUp.connection);
+
+            
 
 
             signUp.NewUser.UserName = txtUserName.Text;
@@ -53,10 +58,23 @@ namespace TutorHub
 
             }
 
+            else if(!Regex.IsMatch(txtEmail.Text,emailPattern))
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Email is not valid!");
+            }
+
             else
             {
-
-                signUp.SignUp2BringToFront();
+                if (tdc.Users.Any(t => t.UserName.Equals(txtUserName.Text)))
+                {
+                    MetroFramework.MetroMessageBox.Show(this, "UserName is Taken! Use Another.");
+                }
+                else if (tdc.Users.Any(t => t.Email.Equals(txtEmail.Text)))
+                {
+                    MetroFramework.MetroMessageBox.Show(this, "Email is used already! Use Another.");
+                }
+                else
+                    signUp.SignUp2BringToFront();
 
             }
 
@@ -71,7 +89,8 @@ namespace TutorHub
         private void btnGoogle_Click(object sender, EventArgs e)
         {
             GoogleClass p = new GoogleClass();
-            p.doOAuth();
+            p.doOAuth(signUp);
+            
         }
     }
 }
