@@ -52,10 +52,10 @@
             // metroLabel1
             // 
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.Location = new System.Drawing.Point(0, 5);
+            this.metroLabel1.Location = new System.Drawing.Point(4, 5);
             this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(929, 38);
+            this.metroLabel1.Size = new System.Drawing.Size(986, 38);
             this.metroLabel1.TabIndex = 0;
             this.metroLabel1.Text = "metroLabel1";
             this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -63,10 +63,10 @@
             // metroLabel2
             // 
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel2.Location = new System.Drawing.Point(0, 65);
+            this.metroLabel2.Location = new System.Drawing.Point(4, 53);
             this.metroLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(929, 43);
+            this.metroLabel2.Size = new System.Drawing.Size(986, 43);
             this.metroLabel2.TabIndex = 1;
             this.metroLabel2.Text = "Create Post";
             this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -74,7 +74,7 @@
             // metroLabel3
             // 
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel3.Location = new System.Drawing.Point(137, 145);
+            this.metroLabel3.Location = new System.Drawing.Point(125, 118);
             this.metroLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(132, 28);
@@ -85,7 +85,7 @@
             // metroLabel4
             // 
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel4.Location = new System.Drawing.Point(137, 198);
+            this.metroLabel4.Location = new System.Drawing.Point(125, 163);
             this.metroLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(132, 36);
@@ -96,7 +96,7 @@
             // metroLabel5
             // 
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel5.Location = new System.Drawing.Point(137, 250);
+            this.metroLabel5.Location = new System.Drawing.Point(514, 163);
             this.metroLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(132, 36);
@@ -107,7 +107,7 @@
             // metroLabel6
             // 
             this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel6.Location = new System.Drawing.Point(137, 335);
+            this.metroLabel6.Location = new System.Drawing.Point(125, 216);
             this.metroLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(132, 34);
@@ -118,7 +118,7 @@
             // metroLabel7
             // 
             this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel7.Location = new System.Drawing.Point(137, 407);
+            this.metroLabel7.Location = new System.Drawing.Point(125, 304);
             this.metroLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(132, 36);
@@ -129,7 +129,7 @@
             // metroLabel8
             // 
             this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel8.Location = new System.Drawing.Point(137, 474);
+            this.metroLabel8.Location = new System.Drawing.Point(125, 363);
             this.metroLabel8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(132, 36);
@@ -153,7 +153,7 @@
             this.metroTextBox1.CustomButton.UseSelectable = true;
             this.metroTextBox1.CustomButton.Visible = false;
             this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(343, 145);
+            this.metroTextBox1.Location = new System.Drawing.Point(309, 118);
             this.metroTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.metroTextBox1.MaxLength = 160;
             this.metroTextBox1.Name = "metroTextBox1";
@@ -164,7 +164,7 @@
             this.metroTextBox1.SelectionLength = 0;
             this.metroTextBox1.SelectionStart = 0;
             this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(439, 28);
+            this.metroTextBox1.Size = new System.Drawing.Size(551, 28);
             this.metroTextBox1.TabIndex = 10;
             this.metroTextBox1.UseSelectable = true;
             this.metroTextBox1.WaterMark = "write a title for post";
@@ -188,7 +188,7 @@
             this.topicTextBox.CustomButton.UseSelectable = true;
             this.topicTextBox.CustomButton.Visible = false;
             this.topicTextBox.Lines = new string[0];
-            this.topicTextBox.Location = new System.Drawing.Point(343, 313);
+            this.topicTextBox.Location = new System.Drawing.Point(309, 216);
             this.topicTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.topicTextBox.MaxLength = 32767;
             this.topicTextBox.Multiline = true;
@@ -200,7 +200,7 @@
             this.topicTextBox.SelectionLength = 0;
             this.topicTextBox.SelectionStart = 0;
             this.topicTextBox.ShortcutsEnabled = true;
-            this.topicTextBox.Size = new System.Drawing.Size(439, 70);
+            this.topicTextBox.Size = new System.Drawing.Size(551, 70);
             this.topicTextBox.TabIndex = 11;
             this.topicTextBox.UseSelectable = true;
             this.topicTextBox.WaterMark = "Write the topic(s) you want learn or teach";
@@ -211,10 +211,10 @@
             // 
             this.metroComboBox1.FormattingEnabled = true;
             this.metroComboBox1.ItemHeight = 24;
-            this.metroComboBox1.Location = new System.Drawing.Point(343, 198);
+            this.metroComboBox1.Location = new System.Drawing.Point(309, 163);
             this.metroComboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(437, 30);
+            this.metroComboBox1.Size = new System.Drawing.Size(171, 30);
             this.metroComboBox1.TabIndex = 12;
             this.metroComboBox1.UseSelectable = true;
             // 
@@ -222,10 +222,10 @@
             // 
             this.metroComboBox2.FormattingEnabled = true;
             this.metroComboBox2.ItemHeight = 24;
-            this.metroComboBox2.Location = new System.Drawing.Point(343, 250);
+            this.metroComboBox2.Location = new System.Drawing.Point(683, 163);
             this.metroComboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.metroComboBox2.Name = "metroComboBox2";
-            this.metroComboBox2.Size = new System.Drawing.Size(437, 30);
+            this.metroComboBox2.Size = new System.Drawing.Size(177, 30);
             this.metroComboBox2.TabIndex = 13;
             this.metroComboBox2.UseSelectable = true;
             // 
@@ -233,27 +233,27 @@
             // 
             this.metroComboBox3.FormattingEnabled = true;
             this.metroComboBox3.ItemHeight = 24;
-            this.metroComboBox3.Location = new System.Drawing.Point(343, 407);
+            this.metroComboBox3.Location = new System.Drawing.Point(309, 304);
             this.metroComboBox3.Margin = new System.Windows.Forms.Padding(4);
             this.metroComboBox3.Name = "metroComboBox3";
-            this.metroComboBox3.Size = new System.Drawing.Size(437, 30);
+            this.metroComboBox3.Size = new System.Drawing.Size(551, 30);
             this.metroComboBox3.TabIndex = 14;
             this.metroComboBox3.UseSelectable = true;
             // 
             // metroDateTime1
             // 
-            this.metroDateTime1.Location = new System.Drawing.Point(343, 474);
+            this.metroDateTime1.Location = new System.Drawing.Point(309, 363);
             this.metroDateTime1.Margin = new System.Windows.Forms.Padding(4);
             this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 30);
             this.metroDateTime1.Name = "metroDateTime1";
-            this.metroDateTime1.Size = new System.Drawing.Size(265, 30);
+            this.metroDateTime1.Size = new System.Drawing.Size(551, 30);
             this.metroDateTime1.TabIndex = 17;
             // 
             // metroComboBox5
             // 
             this.metroComboBox5.FormattingEnabled = true;
             this.metroComboBox5.ItemHeight = 24;
-            this.metroComboBox5.Location = new System.Drawing.Point(668, 542);
+            this.metroComboBox5.Location = new System.Drawing.Point(656, 422);
             this.metroComboBox5.Margin = new System.Windows.Forms.Padding(4);
             this.metroComboBox5.Name = "metroComboBox5";
             this.metroComboBox5.Size = new System.Drawing.Size(204, 30);
@@ -265,10 +265,10 @@
             // 
             this.metroComboBox4.FormattingEnabled = true;
             this.metroComboBox4.ItemHeight = 24;
-            this.metroComboBox4.Location = new System.Drawing.Point(301, 542);
+            this.metroComboBox4.Location = new System.Drawing.Point(309, 422);
             this.metroComboBox4.Margin = new System.Windows.Forms.Padding(4);
             this.metroComboBox4.Name = "metroComboBox4";
-            this.metroComboBox4.Size = new System.Drawing.Size(204, 30);
+            this.metroComboBox4.Size = new System.Drawing.Size(163, 30);
             this.metroComboBox4.TabIndex = 20;
             this.metroComboBox4.UseSelectable = true;
             this.metroComboBox4.SelectedIndexChanged += new System.EventHandler(this.metroComboBox4_SelectedIndexChanged);
@@ -276,7 +276,7 @@
             // metroLabel10
             // 
             this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel10.Location = new System.Drawing.Point(132, 542);
+            this.metroLabel10.Location = new System.Drawing.Point(125, 422);
             this.metroLabel10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel10.Name = "metroLabel10";
             this.metroLabel10.Size = new System.Drawing.Size(132, 34);
@@ -288,7 +288,7 @@
             // metroLabel9
             // 
             this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel9.Location = new System.Drawing.Point(536, 542);
+            this.metroLabel9.Location = new System.Drawing.Point(514, 422);
             this.metroLabel9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(108, 34);
@@ -300,7 +300,7 @@
             // CreatePostButton
             // 
             this.CreatePostButton.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.CreatePostButton.Location = new System.Drawing.Point(423, 599);
+            this.CreatePostButton.Location = new System.Drawing.Point(426, 494);
             this.CreatePostButton.Margin = new System.Windows.Forms.Padding(4);
             this.CreatePostButton.Name = "CreatePostButton";
             this.CreatePostButton.Size = new System.Drawing.Size(133, 36);
@@ -333,7 +333,7 @@
             this.Controls.Add(this.metroLabel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddPostPage";
-            this.Size = new System.Drawing.Size(929, 656);
+            this.Size = new System.Drawing.Size(990, 571);
             this.Load += new System.EventHandler(this.AddPostPage_Load);
             this.ResumeLayout(false);
 
