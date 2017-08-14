@@ -24,29 +24,29 @@ F:\OneDrive\C# Project\TutorHub\TutorHub\obj\Debug\TutorHub.pdb
 F:\OneDrive\C# Project\TutorHub\TutorHub\bin\Debug\TutorHubDatabase.mdf
 F:\OneDrive\C# Project\TutorHub\TutorHub\bin\Debug\TutorHubDatabase_log.ldf
 F:\OneDrive\C# Project\TutorHub\TutorHub\obj\Debug\TutorHub.Form1.resources
-F:\FinalProject\TutionHub\TutorHub\bin\Debug\TutorHubDatabase.mdf
-F:\FinalProject\TutionHub\TutorHub\bin\Debug\TutorHubDatabase_log.ldf
-F:\FinalProject\TutionHub\TutorHub\bin\Debug\TutorHub.exe.config
-F:\FinalProject\TutionHub\TutorHub\bin\Debug\TutorHub.exe
-F:\FinalProject\TutionHub\TutorHub\bin\Debug\TutorHub.pdb
-F:\FinalProject\TutionHub\TutorHub\bin\Debug\MetroFramework.Design.dll
-F:\FinalProject\TutionHub\TutorHub\bin\Debug\MetroFramework.dll
-F:\FinalProject\TutionHub\TutorHub\bin\Debug\MetroFramework.Fonts.dll
-F:\FinalProject\TutionHub\TutorHub\bin\Debug\Newtonsoft.Json.dll
-F:\FinalProject\TutionHub\TutorHub\bin\Debug\S22.Imap.dll
-F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.csprojResolveAssemblyReference.cache
-F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.AddPostPage.resources
-F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.Email.resources
-F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.Form1.resources
-F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.HomePage.resources
-F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.Login.resources
-F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.Properties.Resources.resources
-F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.SignlePostTemplete.resources
-F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.SignUp.resources
-F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.SignUp1.resources
-F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.SignUp2.resources
-F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.SignUp3.resources
-F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.ViewProfile.resources
-F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.csproj.GenerateResource.Cache
-F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.exe
-F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.pdb
+F:\OneDrive\Project Final\TutorHub\TutorHub\bin\Debug\TutorHubDatabase.mdf
+F:\OneDrive\Project Final\TutorHub\TutorHub\bin\Debug\TutorHubDatabase_log.ldf
+F:\OneDrive\Project Final\TutorHub\TutorHub\bin\Debug\TutorHub.exe.config
+F:\OneDrive\Project Final\TutorHub\TutorHub\bin\Debug\TutorHub.exe
+F:\OneDrive\Project Final\TutorHub\TutorHub\bin\Debug\TutorHub.pdb
+F:\OneDrive\Project Final\TutorHub\TutorHub\bin\Debug\MetroFramework.Design.dll
+F:\OneDrive\Project Final\TutorHub\TutorHub\bin\Debug\MetroFramework.dll
+F:\OneDrive\Project Final\TutorHub\TutorHub\bin\Debug\MetroFramework.Fonts.dll
+F:\OneDrive\Project Final\TutorHub\TutorHub\bin\Debug\Newtonsoft.Json.dll
+F:\OneDrive\Project Final\TutorHub\TutorHub\bin\Debug\S22.Imap.dll
+F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.csprojResolveAssemblyReference.cache
+F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.AddPostPage.resources
+F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.Email.resources
+F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.Form1.resources
+F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.HomePage.resources
+F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.Login.resources
+F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.Properties.Resources.resources
+F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.SignlePostTemplete.resources
+F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.SignUp.resources
+F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.SignUp1.resources
+F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.SignUp2.resources
+F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.SignUp3.resources
+F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.ViewProfile.resources
+F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.csproj.GenerateResource.Cache
+F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.exe
+F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.pdb
