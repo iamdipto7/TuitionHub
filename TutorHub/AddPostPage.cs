@@ -12,9 +12,6 @@ namespace TutorHub
 {
     public partial class AddPostPage : UserControl
     {
-        Post NewPost= new Post();
-
-
         private static AddPostPage instance;
         public static AddPostPage Instance
         {
@@ -57,27 +54,7 @@ namespace TutorHub
 
         private void metroComboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
-            NewPost.EndTime=  cb   .GetItemText
-        }
 
-        private void cbCourse_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           NewPost.CourseName = cbCourse.GetItemText(cbCourse.SelectedItem);
-        }
-
-        private void cbDept_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            NewPost.DeptName = cbDept.GetItemText(cbDept.SelectedItem);
-        }
-
-        private void cbType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            NewPost.PostType = cbType.GetItemText(cbType.SelectedItem);
-        }
-
-        private void metroDateTime1_ValueChanged(object sender, EventArgs e)
-        {
-            NewPost.Date = metroDateTime1.Value;
         }
     }
 }

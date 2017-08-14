@@ -55,19 +55,21 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.75269F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.24731F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(724, 502);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(965, 618);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // metroLabel1
             // 
             this.metroLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel1.Location = new System.Drawing.Point(3, 0);
+            this.metroLabel1.Location = new System.Drawing.Point(4, 0);
+            this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(718, 53);
+            this.metroLabel1.Size = new System.Drawing.Size(957, 66);
             this.metroLabel1.TabIndex = 0;
             this.metroLabel1.Text = "navbar";
             this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -82,12 +84,13 @@
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 56);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 70);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(718, 443);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(957, 544);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // tableLayoutPanel6
@@ -98,23 +101,24 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel6.Controls.Add(this.CreatePostTile, 1, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(362, 224);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(482, 276);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 3;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(353, 216);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(471, 264);
             this.tableLayoutPanel6.TabIndex = 3;
             // 
             // CreatePostTile
             // 
             this.CreatePostTile.ActiveControl = null;
             this.CreatePostTile.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CreatePostTile.Location = new System.Drawing.Point(93, 59);
-            this.CreatePostTile.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.CreatePostTile.Location = new System.Drawing.Point(124, 72);
+            this.CreatePostTile.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.CreatePostTile.Name = "CreatePostTile";
-            this.CreatePostTile.Size = new System.Drawing.Size(166, 98);
+            this.CreatePostTile.Size = new System.Drawing.Size(221, 120);
             this.CreatePostTile.TabIndex = 0;
             this.CreatePostTile.Text = "Create Post";
             this.CreatePostTile.UseSelectable = true;
@@ -128,23 +132,24 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel5.Controls.Add(this.notificationTile, 1, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 224);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 276);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 3;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(353, 216);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(470, 264);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
             // notificationTile
             // 
             this.notificationTile.ActiveControl = null;
             this.notificationTile.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.notificationTile.Location = new System.Drawing.Point(93, 59);
-            this.notificationTile.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.notificationTile.Location = new System.Drawing.Point(124, 72);
+            this.notificationTile.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.notificationTile.Name = "notificationTile";
-            this.notificationTile.Size = new System.Drawing.Size(166, 98);
+            this.notificationTile.Size = new System.Drawing.Size(221, 120);
             this.notificationTile.TabIndex = 0;
             this.notificationTile.Text = "Check Notification";
             this.notificationTile.UseSelectable = true;
@@ -157,23 +162,24 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel4.Controls.Add(this.viewPostTile, 1, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(362, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(482, 4);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(353, 215);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(471, 264);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // viewPostTile
             // 
             this.viewPostTile.ActiveControl = null;
             this.viewPostTile.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewPostTile.Location = new System.Drawing.Point(93, 58);
-            this.viewPostTile.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.viewPostTile.Location = new System.Drawing.Point(124, 72);
+            this.viewPostTile.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.viewPostTile.Name = "viewPostTile";
-            this.viewPostTile.Size = new System.Drawing.Size(166, 97);
+            this.viewPostTile.Size = new System.Drawing.Size(221, 120);
             this.viewPostTile.TabIndex = 0;
             this.viewPostTile.Text = "View Posts";
             this.viewPostTile.UseSelectable = true;
@@ -187,23 +193,24 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.Controls.Add(this.profileTile, 1, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(353, 215);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(470, 264);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // profileTile
             // 
             this.profileTile.ActiveControl = null;
             this.profileTile.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileTile.Location = new System.Drawing.Point(93, 58);
-            this.profileTile.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.profileTile.Location = new System.Drawing.Point(124, 72);
+            this.profileTile.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.profileTile.Name = "profileTile";
-            this.profileTile.Size = new System.Drawing.Size(166, 97);
+            this.profileTile.Size = new System.Drawing.Size(221, 120);
             this.profileTile.TabIndex = 0;
             this.profileTile.Text = "Profile";
             this.profileTile.UseSelectable = true;
@@ -211,11 +218,12 @@
             // 
             // HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HomePage";
-            this.Size = new System.Drawing.Size(724, 502);
+            this.Size = new System.Drawing.Size(965, 618);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
