@@ -12,19 +12,27 @@ namespace TutorHub
 {
     public partial class SignUp1 : MetroFramework.Controls.MetroUserControl
     {
-        private static SignUp1 instance;
-        public static SignUp1 Instance
-        {
-            get
-            {
-                if (instance == null)
-                    instance = new SignUp1();
-                return instance;
-            }
-        }
+        //private static SignUp1 instance;
+        //public static SignUp1 Instance
+        //{
+        //    get
+        //    {
+        //        if (instance == null)
+        //            instance = new SignUp1();
+        //        return instance;
+        //    }
+        //}
+
+        SignUp signUp;
         public SignUp1()
         {
             InitializeComponent();
+        }
+
+        public SignUp1(SignUp signUp)
+        {
+            InitializeComponent();
+            this.signUp = signUp;
         }
 
         private void metroLabel1_Click(object sender, EventArgs e)
@@ -32,9 +40,17 @@ namespace TutorHub
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnNextSignUp1_Click(object sender, EventArgs e)
         {
-            SignUp2.Instance.BringToFront();
+
+            signUp.NewUser.UserName = txtUserName.Text;
+            signUp.NewUser.Email = txtEmail.Text;
+
+
+            //Console.WriteLine(SignUp.Instance.NewUser.UserName+ SignUp.Instance.NewUser.Email);
+
+            //SignUp2.Instance.txtPass.Text = SignUp.Instance.NewUser.UserName;
+            //SignUp2.Instance.BringToFront();
         }
 
         private void btnGoogle_Click(object sender, EventArgs e)

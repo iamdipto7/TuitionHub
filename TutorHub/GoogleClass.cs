@@ -204,7 +204,7 @@ namespace TutorHub
                 // reads response body
                 string userinfoResponseText = await userinfoResponseReader.ReadToEndAsync();
                 //output(userinfoResponseText);
-                SignUp1.Instance.metroTextBox1.Text=userinfoResponseText;
+                //SignUp1.Instance.txtUserName.Text=userinfoResponseText;
             }
         }
 
