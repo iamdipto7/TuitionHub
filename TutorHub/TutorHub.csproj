@@ -146,6 +146,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TutorHub.dbml</DependentUpon>
     </Compile>
+    <Compile Include="UserClass.cs" />
     <Compile Include="ViewProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>

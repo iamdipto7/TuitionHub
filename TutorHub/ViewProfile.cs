@@ -36,5 +36,16 @@ namespace TutorHub
         {
 
         }
+
+        private void metroLabel1_Click(object sender, EventArgs e)
+        {
+            //nothing
+        }
+
+        private void ViewProfile_Load(object sender, EventArgs e)
+        {
+            
+
+        }
     }
 }
