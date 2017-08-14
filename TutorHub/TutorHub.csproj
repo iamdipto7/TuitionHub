@@ -97,6 +97,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GoogleClass.cs" />
+    <Compile Include="GoogleLoginClass.cs" />
     <Compile Include="HomePage.cs">
       <SubType>UserControl</SubType>
     </Compile>

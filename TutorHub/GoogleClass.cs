@@ -14,6 +14,8 @@ namespace TutorHub
 {
     class GoogleClass
     {
+        public string first_name, last_name, picture;
+        public string id;
         //static void Main(string[] args)
         //{
 
@@ -94,7 +96,7 @@ namespace TutorHub
             {
                 responseOutput.Close();
                 http.Stop();
-                HomePage.Instance.BringToFront();
+                Login.Instance.BringToFront();
 
                 signUp.Hide();
                 //Console.WriteLine("HTTP server stopped.");
@@ -129,6 +131,8 @@ namespace TutorHub
             // Starts the code exchange at the Token Endpoint.
             performCodeExchange(code, code_verifier, redirectURI);
         }
+
+        
 
         async void performCodeExchange(string code, string code_verifier, string redirectURI)
         {
@@ -217,7 +221,11 @@ namespace TutorHub
                 //var obj = JsonConvert.DeserializeObject<RootObject>(userinfoResponseText);
                 dynamic obj = JObject.Parse(userinfoResponseText);
 
-                //Login.Instance.txtLoginPass.Text = (string)obj.name; ;
+
+                GoogleSignUp(obj);
+                
+
+                //Login.Instance.txtUserName.Text = (string)obj.sub;
                 //output(userinfoResponseText);
                 //SignUp1.Instance.txtUserName.Text=userinfoResponseText;
             }
@@ -288,6 +296,20 @@ namespace TutorHub
         public void BringConsoleToFront()
         {
             
+        }
+
+        public void GoogleSignUp(dynamic obj)
+        {
+            User user = new User();
+            user.GoogleId = (string)obj.sub;
+            user.FirstName = (string)obj.given_name;
+            user.LastName = (string)obj.family_name;
+            user.Image = (string)obj.picture;
+
+
+
+
+            Login.SignUpCheck(user);
         }
 
     }

@@ -126,6 +126,7 @@
             this.GoogleLoginTile.Text = "Login with google";
             this.GoogleLoginTile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.GoogleLoginTile.UseSelectable = true;
+            this.GoogleLoginTile.Click += new System.EventHandler(this.GoogleLoginTile_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -337,7 +338,7 @@
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroTextBox txtUserName;
         public MetroFramework.Controls.MetroTextBox txtLoginPass;
+        public MetroFramework.Controls.MetroTextBox txtUserName;
     }
 }

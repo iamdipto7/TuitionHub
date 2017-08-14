@@ -102,5 +102,53 @@ namespace TutorHub
             
 
         }
+
+        public static void SignUpCheck(User user)
+        {
+            TutorHubDataContext tdc = new TutorHubDataContext(Login.Instance.connection);
+            User u = user;
+            if (tdc.Users.Any(t => t.GoogleId.Equals(u.GoogleId)))
+            {
+                MetroFramework.MetroMessageBox.Show(Login.instance, "This Google  ID is Already registered! Use Another.");
+            }
+            else
+            {
+                tdc.Users.InsertOnSubmit(user);
+                tdc.SubmitChanges();
+                MetroFramework.MetroMessageBox.Show(Login.instance, "Sign Up Cpmpleted!");
+            }
+        }
+
+        public void LoginCheck(User user)
+        {
+            TutorHubDataContext tdc = new TutorHubDataContext(Login.Instance.connection);
+
+            User u = user;
+            int recordCount = 0;
+            recordCount = tdc.Users.Where(x => x.GoogleId == u.GoogleId).Count();
+
+            if (recordCount > 0)
+            {
+                loggedInUser = tdc.Users.SingleOrDefault(x => x.GoogleId == u.GoogleId);
+                Form1.Instance.LoggedInUser = loggedInUser;
+                HomePage.Instance.BringToFront();
+            }
+            else
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Use Registered Google Account!");
+            }
+        }
+
+        private void GoogleLoginTile_Click(object sender, EventArgs e)
+        {
+            GoogleLoginClass p = new GoogleLoginClass();
+            p.doOAuth();
+
+           
+            
+
+
+            
+        }
     }
 }
