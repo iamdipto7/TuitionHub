@@ -36,7 +36,10 @@ namespace TutorHub
         {
             
             HomePage.Instance.BringToFront();
-            SignUp.Instance.Close();
+            SignUp1.Instance.Hide();
+            SignUp2.Instance.Hide();
+            this.Hide();
+            SignUp.Instance.Hide();
 
         }
     }
