@@ -56,6 +56,7 @@ namespace TutorHub
                 //SignUp1.Instance.Hide();
                 //SignUp2.Instance.Hide();
                 signUp.Hide();
+                
                 //SignUp.Instance.Hide();
             }
 
