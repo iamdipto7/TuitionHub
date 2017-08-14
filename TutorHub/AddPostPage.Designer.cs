@@ -143,7 +143,7 @@
             // 
             // 
             this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(413, 2);
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(525, 2);
             this.metroTextBox1.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.metroTextBox1.CustomButton.Name = "";
             this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(23, 23);
@@ -178,7 +178,7 @@
             // 
             // 
             this.topicTextBox.CustomButton.Image = null;
-            this.topicTextBox.CustomButton.Location = new System.Drawing.Point(371, 2);
+            this.topicTextBox.CustomButton.Location = new System.Drawing.Point(483, 2);
             this.topicTextBox.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.topicTextBox.CustomButton.Name = "";
             this.topicTextBox.CustomButton.Size = new System.Drawing.Size(65, 65);
@@ -228,6 +228,7 @@
             this.metroComboBox2.Size = new System.Drawing.Size(177, 30);
             this.metroComboBox2.TabIndex = 13;
             this.metroComboBox2.UseSelectable = true;
+            this.metroComboBox2.SelectedIndexChanged += new System.EventHandler(this.metroComboBox2_SelectedIndexChanged);
             // 
             // metroComboBox3
             // 

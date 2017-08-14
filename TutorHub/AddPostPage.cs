@@ -56,5 +56,10 @@ namespace TutorHub
         {
 
         }
+
+        private void metroComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //course select combo box
+        }
     }
 }
