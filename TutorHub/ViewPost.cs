@@ -37,24 +37,64 @@ namespace TutorHub
 
             TutorHubDataContext tdc = new TutorHubDataContext(Login.Instance.connection);
 
-            var pos = from x in tdc.Posts
-                      orderby x.PId descending
-                      select x;
 
-            foreach (Post z in pos)
+          
+
+
+
+            var pos = tdc.Posts.OrderByDescending(a=> a.PId);
+
+            foreach (var z in pos)
             {
                 SinglePost sig = new SinglePost(z);
+
+
                 mypanel.Controls.Add(sig);
+                //MetroFramework.MetroMessageBox.Show(this, z.PostTitle);
             }
-            
-            
+
+            //SinglePost sige = new SinglePost(new Post());
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            SinglePost sig = new SinglePost();
-            mypanel.Controls.Add(sig);
+
             //sig.Dock = DockStyle.Fill;
+            TutorHubDataContext tdc = new TutorHubDataContext(Login.Instance.connection);
+            var p = from x in tdc.Posts
+                     where x.PostTitle.Contains(metroTextBox1.Text)
+                    select x;
+            mypanel.Controls.Clear();
+
+            foreach (Post r in p)
+            {
+                SinglePost sig = new SinglePost(r);
+
+
+                mypanel.Controls.Add(sig);
+
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+            TutorHubDataContext tdc = new TutorHubDataContext(Login.Instance.connection);
+            var p = from x in tdc.Posts join y in tdc.Users on x.UserId equals y.UserId
+                    where y.UserName.Contains(metroTextBox2.Text)
+                    select x;
+            mypanel.Controls.Clear();
+
+
+
+            foreach( Post r in p)
+            {
+                SinglePost sig = new SinglePost(r);
+
+
+                mypanel.Controls.Add(sig);
+
+            }
         }
     }
 }

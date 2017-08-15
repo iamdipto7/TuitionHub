@@ -12,6 +12,8 @@ namespace TutorHub
 {
     public partial class SinglePost : MetroFramework.Controls.MetroUserControl
     {
+
+        Post p;
         
         public SinglePost()
         {
@@ -21,9 +23,10 @@ namespace TutorHub
  
         }
 
-        public SinglePost( Post p)
+        public SinglePost( Post m)
         {
-
+            InitializeComponent();
+            p = m;
 
             postTitleLnk.Text = p.PostTitle;
             metroLabel6.Text = p.DeptName;
@@ -34,7 +37,7 @@ namespace TutorHub
             TutorHubDataContext tdc = new TutorHubDataContext(Login.Instance.connection);
 
 
-             var by =   tdc.Users.SingleOrDefault(x => x.UserId == p.UserId);
+            var by =   tdc.Users.SingleOrDefault(x => x.UserId == p.UserId);
 
             if(by.UserName.Equals(""))
             {

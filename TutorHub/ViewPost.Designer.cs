@@ -42,8 +42,8 @@
             this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.metroPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -214,6 +214,7 @@
             this.label5.Size = new System.Drawing.Size(35, 36);
             this.label5.TabIndex = 10;
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // metroPanel2
             // 
@@ -240,16 +241,6 @@
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
             // 
-            // checkBox1
-            // 
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(727, 69);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(146, 20);
-            this.checkBox1.TabIndex = 11;
-            this.checkBox1.Text = "I Want To Teach";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // checkBox2
             // 
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -259,6 +250,16 @@
             this.checkBox2.TabIndex = 12;
             this.checkBox2.Text = "I Want TO Learn";
             this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(727, 69);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(146, 20);
+            this.checkBox1.TabIndex = 11;
+            this.checkBox1.Text = "I Want To Teach";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // ViewPost
             // 

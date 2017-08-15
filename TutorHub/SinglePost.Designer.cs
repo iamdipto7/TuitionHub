@@ -200,18 +200,17 @@
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroLink postTitleLnk;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroLink metroLink1;
-        private MetroFramework.Controls.MetroLabel metroLabel6;
-        private MetroFramework.Controls.MetroLabel metroLabel7;
-        private MetroFramework.Controls.MetroLabel metroLabel8;
-        private MetroFramework.Controls.MetroLabel metroLabel9;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        public MetroFramework.Controls.MetroLink postTitleLnk;
+        public MetroFramework.Controls.MetroLink metroLink1;
+        public MetroFramework.Controls.MetroLabel metroLabel6;
+        public MetroFramework.Controls.MetroLabel metroLabel7;
+        public MetroFramework.Controls.MetroLabel metroLabel8;
+        public MetroFramework.Controls.MetroLabel metroLabel9;
+        public MetroFramework.Controls.MetroButton metroButton1;
     }
 }
