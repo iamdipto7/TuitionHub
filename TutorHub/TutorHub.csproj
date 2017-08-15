@@ -142,6 +142,9 @@
     <Compile Include="SignUp3.Designer.cs">
       <DependentUpon>SignUp3.cs</DependentUpon>
     </Compile>
+    <Compile Include="TutorHub.cs">
+      <DependentUpon>TutorHub.dbml</DependentUpon>
+    </Compile>
     <Compile Include="TutorHub.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

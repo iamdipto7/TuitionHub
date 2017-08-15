@@ -145,9 +145,9 @@ namespace TutorHub
 		
 		private string _Topic;
 		
-		private System.TimeSpan _StartTime;
+		private string _StartTime;
 		
-		private System.TimeSpan _EndTime;
+		private string _EndTime;
 		
 		private System.DateTime _Date;
 		
@@ -175,9 +175,9 @@ namespace TutorHub
     partial void OnPostTitleChanged();
     partial void OnTopicChanging(string value);
     partial void OnTopicChanged();
-    partial void OnStartTimeChanging(System.TimeSpan value);
+    partial void OnStartTimeChanging(string value);
     partial void OnStartTimeChanged();
-    partial void OnEndTimeChanging(System.TimeSpan value);
+    partial void OnEndTimeChanging(string value);
     partial void OnEndTimeChanged();
     partial void OnDateChanging(System.DateTime value);
     partial void OnDateChanged();
@@ -303,8 +303,8 @@ namespace TutorHub
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartTime", DbType="Time NOT NULL")]
-		public System.TimeSpan StartTime
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartTime", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string StartTime
 		{
 			get
 			{
@@ -323,8 +323,8 @@ namespace TutorHub
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EndTime", DbType="Time NOT NULL")]
-		public System.TimeSpan EndTime
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EndTime", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string EndTime
 		{
 			get
 			{
