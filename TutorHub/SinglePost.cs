@@ -20,5 +20,42 @@ namespace TutorHub
             
  
         }
+
+        public SinglePost( Post p)
+        {
+
+
+            postTitleLnk.Text = p.PostTitle;
+            metroLabel6.Text = p.DeptName;
+            metroLabel9.Text = p.Date.ToString();
+            metroLabel7.Text = p.CourseName;
+            metroLabel8.Text = p.Topic;
+
+            TutorHubDataContext tdc = new TutorHubDataContext(Login.Instance.connection);
+
+
+             var by =   tdc.Users.SingleOrDefault(x => x.UserId == p.UserId);
+
+            if(by.UserName.Equals(""))
+            {
+                metroLink1.Text = by.FirstName;
+
+
+            }
+            else
+            {
+                metroLink1.Text = by.UserName;
+
+            }
+
+
+            
+
+
+
+        }
+
+
+
     }
 }
