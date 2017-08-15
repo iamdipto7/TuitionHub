@@ -41,7 +41,6 @@ F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.Form1.resources
 F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.HomePage.resources
 F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.Login.resources
 F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.Properties.Resources.resources
-F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.SignlePostTemplete.resources
 F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.SignUp.resources
 F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.SignUp1.resources
 F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.SignUp2.resources
@@ -76,3 +75,6 @@ F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.ViewProfile.resources
 F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.csproj.GenerateResource.Cache
 F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.exe
 F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.pdb
+F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.NavBar.resources
+F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.SinglePost.resources
+F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.ViewPost.resources

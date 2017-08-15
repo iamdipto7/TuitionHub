@@ -54,8 +54,8 @@ namespace TutorHub
                 this.Controls.Add(ViewProfile.Instance);
                 ViewProfile.Instance.Dock = DockStyle.Fill;
 
-                this.Controls.Add(SignlePostTemplete.Instance);
-                SignlePostTemplete.Instance.Dock = DockStyle.Fill;
+                this.Controls.Add(ViewPost.Instance);
+                ViewPost.Instance.Dock = DockStyle.Fill;
 
                 this.Controls.Add(AddPostPage.Instance);
                 AddPostPage.Instance.Dock = DockStyle.Fill;

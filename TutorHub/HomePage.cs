@@ -40,7 +40,7 @@ namespace TutorHub
 
         private void viewPostTile_Click(object sender, EventArgs e)
         {
-            SignlePostTemplete.Instance.BringToFront();
+            ViewPost.Instance.BringToFront();
         }
 
         private void CreatePostTile_Click(object sender, EventArgs e)

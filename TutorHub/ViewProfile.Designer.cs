@@ -167,8 +167,8 @@
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.1902F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.8098F));
             this.tableLayoutPanel4.Controls.Add(this.metroLabel2, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.metroLabel3, 0, 2);
             this.tableLayoutPanel4.Controls.Add(this.metroLabel4, 0, 3);
@@ -181,8 +181,8 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 5;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.5461F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.83926F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.39927F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.65805F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.26044F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.66926F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.5461F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(857, 503);
@@ -196,7 +196,7 @@
             this.metroLabel2.Location = new System.Drawing.Point(27, 98);
             this.metroLabel2.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(288, 69);
+            this.metroLabel2.Size = new System.Drawing.Size(298, 69);
             this.metroLabel2.TabIndex = 0;
             this.metroLabel2.Text = "Name";
             this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -209,7 +209,7 @@
             this.metroLabel3.Location = new System.Drawing.Point(27, 217);
             this.metroLabel3.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(288, 67);
+            this.metroLabel3.Size = new System.Drawing.Size(298, 67);
             this.metroLabel3.TabIndex = 1;
             this.metroLabel3.Text = "Date Of Birth";
             this.metroLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -222,7 +222,7 @@
             this.metroLabel4.Location = new System.Drawing.Point(27, 334);
             this.metroLabel4.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(288, 69);
+            this.metroLabel4.Size = new System.Drawing.Size(298, 69);
             this.metroLabel4.TabIndex = 2;
             this.metroLabel4.Text = "Gender";
             this.metroLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -232,10 +232,10 @@
             this.lblName.AutoSize = true;
             this.lblName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblName.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblName.Location = new System.Drawing.Point(369, 98);
+            this.lblName.Location = new System.Drawing.Point(379, 98);
             this.lblName.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(461, 69);
+            this.lblName.Size = new System.Drawing.Size(451, 69);
             this.lblName.TabIndex = 3;
             this.lblName.Text = "bakiforhad";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -245,10 +245,10 @@
             this.lblDOB.AutoSize = true;
             this.lblDOB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblDOB.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblDOB.Location = new System.Drawing.Point(369, 217);
+            this.lblDOB.Location = new System.Drawing.Point(379, 217);
             this.lblDOB.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
             this.lblDOB.Name = "lblDOB";
-            this.lblDOB.Size = new System.Drawing.Size(461, 67);
+            this.lblDOB.Size = new System.Drawing.Size(451, 67);
             this.lblDOB.TabIndex = 4;
             this.lblDOB.Text = "7th feb 1996";
             this.lblDOB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -258,10 +258,10 @@
             this.lblGender.AutoSize = true;
             this.lblGender.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblGender.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblGender.Location = new System.Drawing.Point(369, 334);
+            this.lblGender.Location = new System.Drawing.Point(379, 334);
             this.lblGender.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(461, 69);
+            this.lblGender.Size = new System.Drawing.Size(451, 69);
             this.lblGender.TabIndex = 5;
             this.lblGender.Text = "Male\r\n";
             this.lblGender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
