@@ -66,7 +66,6 @@ F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.Form1.resources
 F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.HomePage.resources
 F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.Login.resources
 F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.Properties.Resources.resources
-F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.SignlePostTemplete.resources
 F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.SignUp.resources
 F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.SignUp1.resources
 F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.SignUp2.resources
@@ -78,3 +77,8 @@ F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.pdb
 F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.NavBar.resources
 F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.SinglePost.resources
 F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.ViewPost.resources
+F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.NavBar.resources
+F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.SinglePost.resources
+F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.ViewPost.resources
+F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.Editprofile.resources
+F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.RecoverPassForm.resources

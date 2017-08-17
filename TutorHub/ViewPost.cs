@@ -78,12 +78,23 @@ namespace TutorHub
 
         private void label5_Click(object sender, EventArgs e)
         {
+            //changed search function in  :v
 
             TutorHubDataContext tdc = new TutorHubDataContext(Login.Instance.connection);
-            var p = from x in tdc.Posts join y in tdc.Users on x.UserId equals y.UserId
-                    where y.UserName.Contains(metroTextBox2.Text)
+            var p = from x in tdc.Posts
+                    join y in tdc.Users on x.UserId equals y.UserId
+                    where (y.UserName.Contains(metroTextBox2.Text)  &&   
+                           x.PostTitle.Contains(metroComboBox1.Text) )
                     select x;
+           // metroComboBox1.Text = "";
+            //metroComboBox2.Text = "";
             mypanel.Controls.Clear();
+            
+
+
+
+            //List<Post> result = from 
+
 
 
 
