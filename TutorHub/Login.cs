@@ -12,9 +12,9 @@ namespace TutorHub
 {
     public partial class Login : MetroFramework.Controls.MetroUserControl
     {
-        public string connection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\OneDrive\Project Final\TutorHub\TutorHub\TutorHubDatabase.mdf;Integrated Security = True; Connect Timeout = 30";
+      //  public string connection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\OneDrive\Project Final\TutorHub\TutorHub\TutorHubDatabase.mdf;Integrated Security = True; Connect Timeout = 30";
 
-        //public string connection = @"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\FinalProject\TutionHub\TutorHub\TutorHubDatabase.mdf;Integrated Security = True; Connect Timeout = 30";
+        public string connection = @"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\FinalProject\TutionHub\TutorHub\TutorHubDatabase.mdf;Integrated Security = True; Connect Timeout = 30";
 
         User loggedInUser;
         private static Login instance;
@@ -152,6 +152,12 @@ namespace TutorHub
 
 
             
+        }
+
+        private void forgetpassword_Click(object sender, EventArgs e)
+        {
+            RecoverPassForm f2 = new RecoverPassForm();
+            f2.Show();
         }
     }
 }
