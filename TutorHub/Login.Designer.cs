@@ -41,6 +41,7 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.txtUserName = new MetroFramework.Controls.MetroTextBox();
             this.txtLoginPass = new MetroFramework.Controls.MetroTextBox();
+            this.navBar1 = new TutorHub.NavBar();
             this.tableLoginMainPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -54,6 +55,7 @@
             this.tableLoginMainPanel.ColumnCount = 1;
             this.tableLoginMainPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLoginMainPanel.Controls.Add(this.tableLayoutPanel1, 0, 1);
+            this.tableLoginMainPanel.Controls.Add(this.navBar1, 0, 0);
             this.tableLoginMainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLoginMainPanel.Location = new System.Drawing.Point(0, 0);
             this.tableLoginMainPanel.Margin = new System.Windows.Forms.Padding(4);
@@ -306,6 +308,13 @@
             this.txtLoginPass.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txtLoginPass.WithError = true;
             // 
+            // navBar1
+            // 
+            this.navBar1.Location = new System.Drawing.Point(3, 3);
+            this.navBar1.Name = "navBar1";
+            this.navBar1.Size = new System.Drawing.Size(1381, 60);
+            this.navBar1.TabIndex = 1;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -340,5 +349,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         public MetroFramework.Controls.MetroTextBox txtLoginPass;
         public MetroFramework.Controls.MetroTextBox txtUserName;
+        private NavBar navBar1;
     }
 }
