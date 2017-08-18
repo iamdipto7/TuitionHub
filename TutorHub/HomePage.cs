@@ -47,5 +47,10 @@ namespace TutorHub
         {
             AddPostPage.Instance.BringToFront();
         }
+
+        private void metroTile6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

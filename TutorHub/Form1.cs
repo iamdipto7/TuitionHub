@@ -59,6 +59,10 @@ namespace TutorHub
 
                 this.Controls.Add(AddPostPage.Instance);
                 AddPostPage.Instance.Dock = DockStyle.Fill;
+               
+                
+
+
 
                 Login.Instance.BringToFront();
             }
