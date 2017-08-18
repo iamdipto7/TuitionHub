@@ -80,32 +80,7 @@ namespace TutorHub
         {
             //changed search function in  :v
 
-            TutorHubDataContext tdc = new TutorHubDataContext(Login.Instance.connection);
-            var p = from x in tdc.Posts
-                    join y in tdc.Users on x.UserId equals y.UserId
-                    where (y.UserName.Contains(metroTextBox2.Text)  &&   
-                           x.PostTitle.Contains(metroComboBox1.Text) )
-                    select x;
-           // metroComboBox1.Text = "";
-            //metroComboBox2.Text = "";
-            mypanel.Controls.Clear();
-            
-
-
-
-            //List<Post> result = from 
-
-
-
-
-            foreach( Post r in p)
-            {
-                SinglePost sig = new SinglePost(r);
-
-
-                mypanel.Controls.Add(sig);
-
-            }
+           
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -115,7 +90,105 @@ namespace TutorHub
 
         private void label5_Click_1(object sender, EventArgs e)
         {
+                
+           // if(metroComboBox2)
 
+
+
+            TutorHubDataContext tdc = new TutorHubDataContext(Login.Instance.connection);
+            var p = from x in tdc.Posts
+                    join y in tdc.Users on x.UserId equals y.UserId
+                    where y.UserName.Contains(metroTextBox2.Text)
+                    select x;
+            mypanel.Controls.Clear();
+          
+            foreach (Post r in p)
+            {
+                SinglePost sig = new SinglePost(r);
+
+
+                mypanel.Controls.Add(sig);
+
+            }
+        }
+
+        private void metroButton1_Click_1(object sender, EventArgs e)
+        {
+      
+            TutorHubDataContext tdc = new TutorHubDataContext(Login.Instance.connection);
+            var p = from x in tdc.Posts
+                    where x.PostTitle.Contains(metroTextBox1.Text)
+                    orderby x.PId
+                    select x;
+
+            mypanel.Controls.Clear();
+
+            foreach (Post r in p)
+            {
+                SinglePost sig = new SinglePost(r);
+
+
+                mypanel.Controls.Add(sig);
+
+            }
+
+
+
+
+            //var pos = tdc.Posts.OrderByDescending(a => a.PId &);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            
+
+
+            //course
+            TutorHubDataContext tdc = new TutorHubDataContext(Login.Instance.connection);
+            var p = from x in tdc.Posts
+                    join y in tdc.Users on x.UserId equals y.UserId
+                    where ( y.UserName.Contains(metroTextBox2.Text) || metroComboBox2== null ) &&
+                   ( x.PostTitle.Contains(metroComboBox1.Text) || metroComboBox1 ==null )
+                    select x;
+
+            mypanel.Controls.Clear();
+
+            foreach (Post r in p)
+            {
+                SinglePost sig = new SinglePost(r);
+
+
+                mypanel.Controls.Add(sig);
+
+            }
+
+            metroComboBox2.Text = null;
+            metroComboBox1.Text = null;
+
+
+
+        }
+
+        private void metroComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TutorHubDataContext tdc = new TutorHubDataContext(Login.Instance.connection);
+            var p = from x in tdc.Posts
+                    where x.DeptName.Equals(metroComboBox2.Text)
+                    orderby x.PId
+                    select x;
+
+            
+
+            mypanel.Controls.Clear();
+
+            foreach (Post r in p)
+            {
+                SinglePost sig = new SinglePost(r);
+
+
+                mypanel.Controls.Add(sig);
+
+            }
         }
     }
 }
