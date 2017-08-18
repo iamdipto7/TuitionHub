@@ -67,6 +67,8 @@
             this.metroLabel22 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel23 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
@@ -93,8 +95,8 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0099F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.9901F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 0.9901971F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 99.0098F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(949, 520);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -104,11 +106,11 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.metroTabControl1, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 55);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 8);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(943, 462);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(943, 509);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // metroTabControl1
@@ -121,10 +123,10 @@
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.FontWeight = MetroFramework.MetroTabControlWeight.Regular;
             this.metroTabControl1.Location = new System.Drawing.Point(5, 5);
-            this.metroTabControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.metroTabControl1.Margin = new System.Windows.Forms.Padding(5);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 2;
-            this.metroTabControl1.Size = new System.Drawing.Size(933, 452);
+            this.metroTabControl1.Size = new System.Drawing.Size(933, 499);
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTabControl1.UseSelectable = true;
@@ -137,9 +139,10 @@
             this.metroTabPage1.HorizontalScrollbarSize = 10;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 41);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(925, 407);
+            this.metroTabPage1.Size = new System.Drawing.Size(925, 454);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Personal";
+            this.metroTabPage1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
@@ -157,7 +160,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(925, 407);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(925, 454);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // tableLayoutPanel4
@@ -180,7 +183,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.26044F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.66926F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.5461F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(642, 401);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(642, 448);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // metroLabel2
@@ -188,10 +191,10 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel2.Location = new System.Drawing.Point(20, 78);
-            this.metroLabel2.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.metroLabel2.Location = new System.Drawing.Point(20, 85);
+            this.metroLabel2.Margin = new System.Windows.Forms.Padding(20);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(224, 55);
+            this.metroLabel2.Size = new System.Drawing.Size(224, 66);
             this.metroLabel2.TabIndex = 0;
             this.metroLabel2.Text = "Name";
             this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -201,10 +204,10 @@
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel3.Location = new System.Drawing.Point(20, 173);
-            this.metroLabel3.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.metroLabel3.Location = new System.Drawing.Point(20, 191);
+            this.metroLabel3.Margin = new System.Windows.Forms.Padding(20);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(224, 53);
+            this.metroLabel3.Size = new System.Drawing.Size(224, 64);
             this.metroLabel3.TabIndex = 1;
             this.metroLabel3.Text = "Date Of Birth";
             this.metroLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -214,10 +217,10 @@
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel4.Location = new System.Drawing.Point(20, 266);
-            this.metroLabel4.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.metroLabel4.Location = new System.Drawing.Point(20, 295);
+            this.metroLabel4.Margin = new System.Windows.Forms.Padding(20);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(224, 55);
+            this.metroLabel4.Size = new System.Drawing.Size(224, 66);
             this.metroLabel4.TabIndex = 2;
             this.metroLabel4.Text = "Gender";
             this.metroLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -227,10 +230,10 @@
             this.lblName.AutoSize = true;
             this.lblName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblName.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblName.Location = new System.Drawing.Point(284, 78);
-            this.lblName.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.lblName.Location = new System.Drawing.Point(284, 85);
+            this.lblName.Margin = new System.Windows.Forms.Padding(20);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(338, 55);
+            this.lblName.Size = new System.Drawing.Size(338, 66);
             this.lblName.TabIndex = 3;
             this.lblName.Text = "bakiforhad";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -240,10 +243,10 @@
             this.lblDOB.AutoSize = true;
             this.lblDOB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblDOB.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblDOB.Location = new System.Drawing.Point(284, 173);
-            this.lblDOB.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.lblDOB.Location = new System.Drawing.Point(284, 191);
+            this.lblDOB.Margin = new System.Windows.Forms.Padding(20);
             this.lblDOB.Name = "lblDOB";
-            this.lblDOB.Size = new System.Drawing.Size(338, 53);
+            this.lblDOB.Size = new System.Drawing.Size(338, 64);
             this.lblDOB.TabIndex = 4;
             this.lblDOB.Text = "7th feb 1996";
             this.lblDOB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -253,10 +256,10 @@
             this.lblGender.AutoSize = true;
             this.lblGender.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblGender.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblGender.Location = new System.Drawing.Point(284, 266);
-            this.lblGender.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.lblGender.Location = new System.Drawing.Point(284, 295);
+            this.lblGender.Margin = new System.Windows.Forms.Padding(20);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(338, 55);
+            this.lblGender.Size = new System.Drawing.Size(338, 66);
             this.lblGender.TabIndex = 5;
             this.lblGender.Text = "Male\r\n";
             this.lblGender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -273,7 +276,7 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(271, 401);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(271, 448);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
             // metroTile1
@@ -281,9 +284,9 @@
             this.metroTile1.ActiveControl = null;
             this.metroTile1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTile1.Location = new System.Drawing.Point(8, 8);
-            this.metroTile1.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.metroTile1.Margin = new System.Windows.Forms.Padding(8);
             this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(255, 244);
+            this.metroTile1.Size = new System.Drawing.Size(255, 275);
             this.metroTile1.TabIndex = 0;
             this.metroTile1.Text = "metroTile1";
             this.metroTile1.UseSelectable = true;
@@ -292,10 +295,10 @@
             // 
             this.metroTile2.ActiveControl = null;
             this.metroTile2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTile2.Location = new System.Drawing.Point(8, 268);
-            this.metroTile2.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.metroTile2.Location = new System.Drawing.Point(8, 299);
+            this.metroTile2.Margin = new System.Windows.Forms.Padding(8);
             this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(255, 125);
+            this.metroTile2.Size = new System.Drawing.Size(255, 141);
             this.metroTile2.TabIndex = 1;
             this.metroTile2.Text = "This is my fucking description so fuck yourself with this fucking fuck.\r\nwhat the" +
     " father fucking fuck \r\n";
@@ -311,9 +314,10 @@
             this.metroTabPage2.HorizontalScrollbarSize = 10;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 41);
             this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(925, 407);
+            this.metroTabPage2.Size = new System.Drawing.Size(925, 454);
             this.metroTabPage2.TabIndex = 1;
             this.metroTabPage2.Text = "Contact";
+            this.metroTabPage2.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
@@ -328,7 +332,7 @@
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(925, 407);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(925, 454);
             this.tableLayoutPanel6.TabIndex = 2;
             // 
             // tableLayoutPanel7
@@ -338,6 +342,7 @@
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.83203F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.03639F));
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel8, 1, 1);
+            this.tableLayoutPanel7.Controls.Add(this.metroLabel5, 1, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
@@ -345,7 +350,7 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.91542F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.41791F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(919, 401);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(919, 448);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
             // tableLayoutPanel8
@@ -362,7 +367,7 @@
             this.tableLayoutPanel8.Controls.Add(this.metroLabel15, 1, 3);
             this.tableLayoutPanel8.Controls.Add(this.metroLabel8, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(180, 76);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(180, 84);
             this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 4;
@@ -370,7 +375,7 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(558, 248);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(558, 279);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
             // metroLabel9
@@ -378,10 +383,10 @@
             this.metroLabel9.AutoSize = true;
             this.metroLabel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel9.Location = new System.Drawing.Point(5, 72);
+            this.metroLabel9.Location = new System.Drawing.Point(5, 79);
             this.metroLabel9.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(213, 42);
+            this.metroLabel9.Size = new System.Drawing.Size(213, 49);
             this.metroLabel9.TabIndex = 1;
             this.metroLabel9.Text = "Skype Id";
             this.metroLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -391,10 +396,10 @@
             this.metroLabel10.AutoSize = true;
             this.metroLabel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel10.Location = new System.Drawing.Point(5, 134);
+            this.metroLabel10.Location = new System.Drawing.Point(5, 148);
             this.metroLabel10.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(213, 42);
+            this.metroLabel10.Size = new System.Drawing.Size(213, 49);
             this.metroLabel10.TabIndex = 2;
             this.metroLabel10.Text = "Phone Number";
             this.metroLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -404,10 +409,10 @@
             this.metroLabel11.AutoSize = true;
             this.metroLabel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroLabel11.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel11.Location = new System.Drawing.Point(5, 196);
+            this.metroLabel11.Location = new System.Drawing.Point(5, 217);
             this.metroLabel11.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(213, 42);
+            this.metroLabel11.Size = new System.Drawing.Size(213, 52);
             this.metroLabel11.TabIndex = 3;
             this.metroLabel11.Text = "Address";
             this.metroLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -419,7 +424,7 @@
             this.metroLabel12.Location = new System.Drawing.Point(228, 10);
             this.metroLabel12.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(325, 42);
+            this.metroLabel12.Size = new System.Drawing.Size(325, 49);
             this.metroLabel12.TabIndex = 4;
             this.metroLabel12.Text = "metroLabel12";
             // 
@@ -427,10 +432,10 @@
             // 
             this.metroLabel13.AutoSize = true;
             this.metroLabel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel13.Location = new System.Drawing.Point(228, 72);
+            this.metroLabel13.Location = new System.Drawing.Point(228, 79);
             this.metroLabel13.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(325, 42);
+            this.metroLabel13.Size = new System.Drawing.Size(325, 49);
             this.metroLabel13.TabIndex = 5;
             this.metroLabel13.Text = "metroLabel13";
             // 
@@ -438,10 +443,10 @@
             // 
             this.metroLabel14.AutoSize = true;
             this.metroLabel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel14.Location = new System.Drawing.Point(228, 134);
+            this.metroLabel14.Location = new System.Drawing.Point(228, 148);
             this.metroLabel14.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(325, 42);
+            this.metroLabel14.Size = new System.Drawing.Size(325, 49);
             this.metroLabel14.TabIndex = 6;
             this.metroLabel14.Text = "metroLabel14";
             // 
@@ -449,10 +454,10 @@
             // 
             this.metroLabel15.AutoSize = true;
             this.metroLabel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel15.Location = new System.Drawing.Point(228, 196);
+            this.metroLabel15.Location = new System.Drawing.Point(228, 217);
             this.metroLabel15.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.metroLabel15.Name = "metroLabel15";
-            this.metroLabel15.Size = new System.Drawing.Size(325, 42);
+            this.metroLabel15.Size = new System.Drawing.Size(325, 52);
             this.metroLabel15.TabIndex = 7;
             this.metroLabel15.Text = "metroLabel15";
             // 
@@ -464,7 +469,7 @@
             this.metroLabel8.Location = new System.Drawing.Point(5, 10);
             this.metroLabel8.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(213, 42);
+            this.metroLabel8.Size = new System.Drawing.Size(213, 49);
             this.metroLabel8.TabIndex = 0;
             this.metroLabel8.Text = "EMail Id";
             this.metroLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -477,9 +482,10 @@
             this.metroTabPage3.HorizontalScrollbarSize = 10;
             this.metroTabPage3.Location = new System.Drawing.Point(4, 41);
             this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(925, 407);
+            this.metroTabPage3.Size = new System.Drawing.Size(925, 454);
             this.metroTabPage3.TabIndex = 2;
             this.metroTabPage3.Text = "Education";
+            this.metroTabPage3.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTabPage3.VerticalScrollbarBarColor = true;
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.VerticalScrollbarSize = 10;
@@ -491,21 +497,22 @@
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.83203F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.03639F));
             this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel10, 1, 1);
+            this.tableLayoutPanel9.Controls.Add(this.metroLabel6, 1, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 3;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.91542F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.41791F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(925, 407);
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.64128F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.896806F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(925, 454);
             this.tableLayoutPanel9.TabIndex = 2;
             // 
             // tableLayoutPanel10
             // 
             this.tableLayoutPanel10.ColumnCount = 2;
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.tableLayoutPanel10.Controls.Add(this.metroLabel16, 0, 1);
             this.tableLayoutPanel10.Controls.Add(this.metroLabel17, 0, 2);
             this.tableLayoutPanel10.Controls.Add(this.metroLabel18, 0, 3);
@@ -515,15 +522,15 @@
             this.tableLayoutPanel10.Controls.Add(this.metroLabel22, 1, 3);
             this.tableLayoutPanel10.Controls.Add(this.metroLabel23, 0, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(181, 77);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(181, 85);
             this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 4;
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(561, 252);
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(561, 331);
             this.tableLayoutPanel10.TabIndex = 0;
             // 
             // metroLabel16
@@ -531,39 +538,42 @@
             this.metroLabel16.AutoSize = true;
             this.metroLabel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroLabel16.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel16.Location = new System.Drawing.Point(5, 73);
+            this.metroLabel16.Location = new System.Drawing.Point(5, 83);
             this.metroLabel16.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.metroLabel16.Name = "metroLabel16";
-            this.metroLabel16.Size = new System.Drawing.Size(214, 43);
+            this.metroLabel16.Size = new System.Drawing.Size(214, 53);
             this.metroLabel16.TabIndex = 1;
-            this.metroLabel16.Text = "Skype Id";
+            this.metroLabel16.Text = "HSC";
             this.metroLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel16.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroLabel17
             // 
             this.metroLabel17.AutoSize = true;
             this.metroLabel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroLabel17.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel17.Location = new System.Drawing.Point(5, 136);
+            this.metroLabel17.Location = new System.Drawing.Point(5, 156);
             this.metroLabel17.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(214, 43);
+            this.metroLabel17.Size = new System.Drawing.Size(214, 53);
             this.metroLabel17.TabIndex = 2;
-            this.metroLabel17.Text = "Phone Number";
+            this.metroLabel17.Text = "SSC";
             this.metroLabel17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel17.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroLabel18
             // 
             this.metroLabel18.AutoSize = true;
             this.metroLabel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroLabel18.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel18.Location = new System.Drawing.Point(5, 199);
+            this.metroLabel18.Location = new System.Drawing.Point(5, 229);
             this.metroLabel18.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.metroLabel18.Name = "metroLabel18";
-            this.metroLabel18.Size = new System.Drawing.Size(214, 43);
+            this.metroLabel18.Size = new System.Drawing.Size(214, 56);
             this.metroLabel18.TabIndex = 3;
-            this.metroLabel18.Text = "Address";
+            this.metroLabel18.Text = "Skills";
             this.metroLabel18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel18.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroLabel19
             // 
@@ -572,42 +582,46 @@
             this.metroLabel19.Location = new System.Drawing.Point(229, 10);
             this.metroLabel19.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.metroLabel19.Name = "metroLabel19";
-            this.metroLabel19.Size = new System.Drawing.Size(327, 43);
+            this.metroLabel19.Size = new System.Drawing.Size(327, 53);
             this.metroLabel19.TabIndex = 4;
             this.metroLabel19.Text = "metroLabel19";
+            this.metroLabel19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroLabel20
             // 
             this.metroLabel20.AutoSize = true;
             this.metroLabel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel20.Location = new System.Drawing.Point(229, 73);
+            this.metroLabel20.Location = new System.Drawing.Point(229, 83);
             this.metroLabel20.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.metroLabel20.Name = "metroLabel20";
-            this.metroLabel20.Size = new System.Drawing.Size(327, 43);
+            this.metroLabel20.Size = new System.Drawing.Size(327, 53);
             this.metroLabel20.TabIndex = 5;
             this.metroLabel20.Text = "metroLabel20";
+            this.metroLabel20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroLabel21
             // 
             this.metroLabel21.AutoSize = true;
             this.metroLabel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel21.Location = new System.Drawing.Point(229, 136);
+            this.metroLabel21.Location = new System.Drawing.Point(229, 156);
             this.metroLabel21.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.metroLabel21.Name = "metroLabel21";
-            this.metroLabel21.Size = new System.Drawing.Size(327, 43);
+            this.metroLabel21.Size = new System.Drawing.Size(327, 53);
             this.metroLabel21.TabIndex = 6;
             this.metroLabel21.Text = "metroLabel21";
+            this.metroLabel21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroLabel22
             // 
             this.metroLabel22.AutoSize = true;
             this.metroLabel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel22.Location = new System.Drawing.Point(229, 199);
-            this.metroLabel22.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            this.metroLabel22.Location = new System.Drawing.Point(229, 229);
+            this.metroLabel22.Margin = new System.Windows.Forms.Padding(5);
             this.metroLabel22.Name = "metroLabel22";
-            this.metroLabel22.Size = new System.Drawing.Size(327, 43);
+            this.metroLabel22.Size = new System.Drawing.Size(327, 56);
             this.metroLabel22.TabIndex = 7;
             this.metroLabel22.Text = "metroLabel22";
+            this.metroLabel22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroLabel23
             // 
@@ -617,10 +631,11 @@
             this.metroLabel23.Location = new System.Drawing.Point(5, 10);
             this.metroLabel23.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.metroLabel23.Name = "metroLabel23";
-            this.metroLabel23.Size = new System.Drawing.Size(214, 43);
+            this.metroLabel23.Size = new System.Drawing.Size(214, 53);
             this.metroLabel23.TabIndex = 0;
-            this.metroLabel23.Text = "EMail Id";
+            this.metroLabel23.Text = "Univarsity";
             this.metroLabel23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel23.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroLabel1
             // 
@@ -630,11 +645,33 @@
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel1.Location = new System.Drawing.Point(3, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(943, 52);
+            this.metroLabel1.Size = new System.Drawing.Size(943, 5);
             this.metroLabel1.TabIndex = 1;
             this.metroLabel1.Text = "navbar";
             this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroLabel1.Click += new System.EventHandler(this.metroLabel1_Click);
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroLabel5.Location = new System.Drawing.Point(178, 0);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(562, 74);
+            this.metroLabel5.TabIndex = 1;
+            this.metroLabel5.Text = "metroLabel5";
+            this.metroLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroLabel6.Location = new System.Drawing.Point(179, 0);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(565, 75);
+            this.metroLabel6.TabIndex = 1;
+            this.metroLabel6.Text = "metroLabel6";
+            this.metroLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ViewProfile
             // 
@@ -656,10 +693,12 @@
             this.metroTabPage2.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel7.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
             this.metroTabPage3.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel9.PerformLayout();
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel10.PerformLayout();
             this.ResumeLayout(false);
@@ -707,5 +746,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel22;
         private MetroFramework.Controls.MetroLabel metroLabel23;
         public MetroFramework.Controls.MetroLabel lblName;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
     }
 }

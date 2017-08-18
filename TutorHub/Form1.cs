@@ -74,5 +74,19 @@ namespace TutorHub
         {
 
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(HomePage.Instance.metroTile1.BackColor== Color.LightSkyBlue)
+            {
+                HomePage.Instance.metroTile1.BackColor = Color.YellowGreen;
+                HomePage.Instance.metroTile1.Refresh();
+            }
+            else
+            {
+                HomePage.Instance.metroTile1.BackColor = Color.LightSkyBlue;
+                HomePage.Instance.metroTile1.Refresh();
+            }
+        }
     }
 }

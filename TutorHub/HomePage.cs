@@ -50,7 +50,32 @@ namespace TutorHub
 
         private void metroTile6_Click(object sender, EventArgs e)
         {
+            ViewProfile.Instance.BringToFront();
+        }
 
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
+            ViewPost.Instance.BringToFront();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(metroTile2.BackColor== Color.LightSkyBlue)
+            {
+                metroTile2.BackColor = Color.Red;
+               
+            }
+            else
+            {
+
+                metroTile2.BackColor = Color.LightSkyBlue; 
+            }
+
+        }
+
+        private void HomePage_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
         }
     }
 }

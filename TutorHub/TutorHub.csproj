@@ -220,6 +220,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RecoverPassForm.resx">
       <DependentUpon>RecoverPassForm.cs</DependentUpon>
@@ -271,6 +272,8 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Screenshot %2827%29.png" />
+    <None Include="Resources\Screenshot %2827%291.png" />
     <Content Include="TutorHubDatabase.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

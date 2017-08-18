@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
             this.metroTile5 = new MetroFramework.Controls.MetroTile();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // metroTile6
@@ -45,9 +47,14 @@
             this.metroTile6.TabIndex = 11;
             this.metroTile6.Text = "profile";
             this.metroTile6.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTile6.TileImage = global::TutorHub.Properties.Resources.Screenshot__27_1;
+            this.metroTile6.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile6.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.metroTile6.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.metroTile6.UseCustomBackColor = true;
+            this.metroTile6.UseCustomForeColor = true;
             this.metroTile6.UseSelectable = true;
+            this.metroTile6.UseTileImage = true;
             this.metroTile6.Click += new System.EventHandler(this.metroTile6_Click);
             // 
             // metroTile5
@@ -99,6 +106,12 @@
             this.metroTile1.TabIndex = 6;
             this.metroTile1.Text = "View Post";
             this.metroTile1.UseSelectable = true;
+            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 200;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // HomePage
             // 
@@ -112,6 +125,7 @@
             this.Controls.Add(this.metroTile1);
             this.Name = "HomePage";
             this.Size = new System.Drawing.Size(875, 446);
+            this.Load += new System.EventHandler(this.HomePage_Load);
             this.ResumeLayout(false);
 
         }
@@ -123,6 +137,7 @@
         private MetroFramework.Controls.MetroTile metroTile4;
         private MetroFramework.Controls.MetroTile metroTile3;
         private MetroFramework.Controls.MetroTile metroTile2;
-        private MetroFramework.Controls.MetroTile metroTile1;
+        private System.Windows.Forms.Timer timer1;
+        public MetroFramework.Controls.MetroTile metroTile1;
     }
 }
