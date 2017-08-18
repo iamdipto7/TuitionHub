@@ -50,6 +50,7 @@ namespace TutorHub
 
         private void metroTile6_Click(object sender, EventArgs e)
         {
+            ViewProfile.Instance.ViewMyProfile();
             ViewProfile.Instance.BringToFront();
         }
 

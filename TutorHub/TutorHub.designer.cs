@@ -30,24 +30,21 @@ namespace TutorHub
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertCourse(Course instance);
-    partial void UpdateCourse(Course instance);
-    partial void DeleteCourse(Course instance);
-    partial void InsertDept(Dept instance);
-    partial void UpdateDept(Dept instance);
-    partial void DeleteDept(Dept instance);
-    partial void InsertPost(Post instance);
-    partial void UpdatePost(Post instance);
-    partial void DeletePost(Post instance);
-    partial void InsertSkill(Skill instance);
-    partial void UpdateSkill(Skill instance);
-    partial void DeleteSkill(Skill instance);
     partial void InsertUser(User instance);
     partial void UpdateUser(User instance);
     partial void DeleteUser(User instance);
-    partial void InsertVerification(Verification instance);
-    partial void UpdateVerification(Verification instance);
-    partial void DeleteVerification(Verification instance);
+    partial void InsertSkill(Skill instance);
+    partial void UpdateSkill(Skill instance);
+    partial void DeleteSkill(Skill instance);
+    partial void InsertPost(Post instance);
+    partial void UpdatePost(Post instance);
+    partial void DeletePost(Post instance);
+    partial void InsertDept(Dept instance);
+    partial void UpdateDept(Dept instance);
+    partial void DeleteDept(Dept instance);
+    partial void InsertCourse(Course instance);
+    partial void UpdateCourse(Course instance);
+    partial void DeleteCourse(Course instance);
     #endregion
 		
 		public TutorHubDataContext() : 
@@ -80,27 +77,11 @@ namespace TutorHub
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<Course> Courses
+		public System.Data.Linq.Table<User> Users
 		{
 			get
 			{
-				return this.GetTable<Course>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Dept> Depts
-		{
-			get
-			{
-				return this.GetTable<Dept>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Post> Posts
-		{
-			get
-			{
-				return this.GetTable<Post>();
+				return this.GetTable<User>();
 			}
 		}
 		
@@ -112,892 +93,27 @@ namespace TutorHub
 			}
 		}
 		
-		public System.Data.Linq.Table<User> Users
+		public System.Data.Linq.Table<Post> Posts
 		{
 			get
 			{
-				return this.GetTable<User>();
+				return this.GetTable<Post>();
 			}
 		}
 		
-		public System.Data.Linq.Table<Verification> Verifications
+		public System.Data.Linq.Table<Dept> Depts
 		{
 			get
 			{
-				return this.GetTable<Verification>();
+				return this.GetTable<Dept>();
 			}
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Course")]
-	public partial class Course : INotifyPropertyChanging, INotifyPropertyChanged
-	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _CourseId;
-		
-		private int _DeptId;
-		
-		private string _CourseName;
-		
-		private EntitySet<Post> _Posts;
-		
-		private EntityRef<Dept> _Dept;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnCourseIdChanging(int value);
-    partial void OnCourseIdChanged();
-    partial void OnDeptIdChanging(int value);
-    partial void OnDeptIdChanged();
-    partial void OnCourseNameChanging(string value);
-    partial void OnCourseNameChanged();
-    #endregion
-		
-		public Course()
-		{
-			this._Posts = new EntitySet<Post>(new Action<Post>(this.attach_Posts), new Action<Post>(this.detach_Posts));
-			this._Dept = default(EntityRef<Dept>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CourseId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int CourseId
+		public System.Data.Linq.Table<Course> Courses
 		{
 			get
 			{
-				return this._CourseId;
-			}
-			set
-			{
-				if ((this._CourseId != value))
-				{
-					this.OnCourseIdChanging(value);
-					this.SendPropertyChanging();
-					this._CourseId = value;
-					this.SendPropertyChanged("CourseId");
-					this.OnCourseIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeptId", DbType="Int NOT NULL")]
-		public int DeptId
-		{
-			get
-			{
-				return this._DeptId;
-			}
-			set
-			{
-				if ((this._DeptId != value))
-				{
-					if (this._Dept.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnDeptIdChanging(value);
-					this.SendPropertyChanging();
-					this._DeptId = value;
-					this.SendPropertyChanged("DeptId");
-					this.OnDeptIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CourseName", DbType="VarChar(80) NOT NULL", CanBeNull=false)]
-		public string CourseName
-		{
-			get
-			{
-				return this._CourseName;
-			}
-			set
-			{
-				if ((this._CourseName != value))
-				{
-					this.OnCourseNameChanging(value);
-					this.SendPropertyChanging();
-					this._CourseName = value;
-					this.SendPropertyChanged("CourseName");
-					this.OnCourseNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Course_Post", Storage="_Posts", ThisKey="CourseName", OtherKey="CourseName")]
-		public EntitySet<Post> Posts
-		{
-			get
-			{
-				return this._Posts;
-			}
-			set
-			{
-				this._Posts.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Dept_Course", Storage="_Dept", ThisKey="DeptId", OtherKey="DeptId", IsForeignKey=true)]
-		public Dept Dept
-		{
-			get
-			{
-				return this._Dept.Entity;
-			}
-			set
-			{
-				Dept previousValue = this._Dept.Entity;
-				if (((previousValue != value) 
-							|| (this._Dept.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Dept.Entity = null;
-						previousValue.Courses.Remove(this);
-					}
-					this._Dept.Entity = value;
-					if ((value != null))
-					{
-						value.Courses.Add(this);
-						this._DeptId = value.DeptId;
-					}
-					else
-					{
-						this._DeptId = default(int);
-					}
-					this.SendPropertyChanged("Dept");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Posts(Post entity)
-		{
-			this.SendPropertyChanging();
-			entity.Course = this;
-		}
-		
-		private void detach_Posts(Post entity)
-		{
-			this.SendPropertyChanging();
-			entity.Course = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Dept")]
-	public partial class Dept : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _DeptId;
-		
-		private string _DeptName;
-		
-		private EntitySet<Course> _Courses;
-		
-		private EntitySet<Post> _Posts;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnDeptIdChanging(int value);
-    partial void OnDeptIdChanged();
-    partial void OnDeptNameChanging(string value);
-    partial void OnDeptNameChanged();
-    #endregion
-		
-		public Dept()
-		{
-			this._Courses = new EntitySet<Course>(new Action<Course>(this.attach_Courses), new Action<Course>(this.detach_Courses));
-			this._Posts = new EntitySet<Post>(new Action<Post>(this.attach_Posts), new Action<Post>(this.detach_Posts));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeptId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int DeptId
-		{
-			get
-			{
-				return this._DeptId;
-			}
-			set
-			{
-				if ((this._DeptId != value))
-				{
-					this.OnDeptIdChanging(value);
-					this.SendPropertyChanging();
-					this._DeptId = value;
-					this.SendPropertyChanged("DeptId");
-					this.OnDeptIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeptName", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string DeptName
-		{
-			get
-			{
-				return this._DeptName;
-			}
-			set
-			{
-				if ((this._DeptName != value))
-				{
-					this.OnDeptNameChanging(value);
-					this.SendPropertyChanging();
-					this._DeptName = value;
-					this.SendPropertyChanged("DeptName");
-					this.OnDeptNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Dept_Course", Storage="_Courses", ThisKey="DeptId", OtherKey="DeptId")]
-		public EntitySet<Course> Courses
-		{
-			get
-			{
-				return this._Courses;
-			}
-			set
-			{
-				this._Courses.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Dept_Post", Storage="_Posts", ThisKey="DeptName", OtherKey="DeptName")]
-		public EntitySet<Post> Posts
-		{
-			get
-			{
-				return this._Posts;
-			}
-			set
-			{
-				this._Posts.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Courses(Course entity)
-		{
-			this.SendPropertyChanging();
-			entity.Dept = this;
-		}
-		
-		private void detach_Courses(Course entity)
-		{
-			this.SendPropertyChanging();
-			entity.Dept = null;
-		}
-		
-		private void attach_Posts(Post entity)
-		{
-			this.SendPropertyChanging();
-			entity.Dept = this;
-		}
-		
-		private void detach_Posts(Post entity)
-		{
-			this.SendPropertyChanging();
-			entity.Dept = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Post")]
-	public partial class Post : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _PId;
-		
-		private string _DeptName;
-		
-		private string _CourseName;
-		
-		private string _PostTitle;
-		
-		private string _Topic;
-		
-		private string _StartTime;
-		
-		private string _EndTime;
-		
-		private System.DateTime _Date;
-		
-		private string _PostType;
-		
-		private int _UserId;
-		
-		private EntityRef<Dept> _Dept;
-		
-		private EntityRef<Course> _Course;
-		
-		private EntityRef<User> _User;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnPIdChanging(int value);
-    partial void OnPIdChanged();
-    partial void OnDeptNameChanging(string value);
-    partial void OnDeptNameChanged();
-    partial void OnCourseNameChanging(string value);
-    partial void OnCourseNameChanged();
-    partial void OnPostTitleChanging(string value);
-    partial void OnPostTitleChanged();
-    partial void OnTopicChanging(string value);
-    partial void OnTopicChanged();
-    partial void OnStartTimeChanging(string value);
-    partial void OnStartTimeChanged();
-    partial void OnEndTimeChanging(string value);
-    partial void OnEndTimeChanged();
-    partial void OnDateChanging(System.DateTime value);
-    partial void OnDateChanged();
-    partial void OnPostTypeChanging(string value);
-    partial void OnPostTypeChanged();
-    partial void OnUserIdChanging(int value);
-    partial void OnUserIdChanged();
-    #endregion
-		
-		public Post()
-		{
-			this._Dept = default(EntityRef<Dept>);
-			this._Course = default(EntityRef<Course>);
-			this._User = default(EntityRef<User>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int PId
-		{
-			get
-			{
-				return this._PId;
-			}
-			set
-			{
-				if ((this._PId != value))
-				{
-					this.OnPIdChanging(value);
-					this.SendPropertyChanging();
-					this._PId = value;
-					this.SendPropertyChanged("PId");
-					this.OnPIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeptName", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string DeptName
-		{
-			get
-			{
-				return this._DeptName;
-			}
-			set
-			{
-				if ((this._DeptName != value))
-				{
-					if (this._Dept.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnDeptNameChanging(value);
-					this.SendPropertyChanging();
-					this._DeptName = value;
-					this.SendPropertyChanged("DeptName");
-					this.OnDeptNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CourseName", DbType="VarChar(80) NOT NULL", CanBeNull=false)]
-		public string CourseName
-		{
-			get
-			{
-				return this._CourseName;
-			}
-			set
-			{
-				if ((this._CourseName != value))
-				{
-					if (this._Course.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnCourseNameChanging(value);
-					this.SendPropertyChanging();
-					this._CourseName = value;
-					this.SendPropertyChanged("CourseName");
-					this.OnCourseNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostTitle", DbType="VarChar(160) NOT NULL", CanBeNull=false)]
-		public string PostTitle
-		{
-			get
-			{
-				return this._PostTitle;
-			}
-			set
-			{
-				if ((this._PostTitle != value))
-				{
-					this.OnPostTitleChanging(value);
-					this.SendPropertyChanging();
-					this._PostTitle = value;
-					this.SendPropertyChanged("PostTitle");
-					this.OnPostTitleChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Topic", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string Topic
-		{
-			get
-			{
-				return this._Topic;
-			}
-			set
-			{
-				if ((this._Topic != value))
-				{
-					this.OnTopicChanging(value);
-					this.SendPropertyChanging();
-					this._Topic = value;
-					this.SendPropertyChanged("Topic");
-					this.OnTopicChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartTime", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string StartTime
-		{
-			get
-			{
-				return this._StartTime;
-			}
-			set
-			{
-				if ((this._StartTime != value))
-				{
-					this.OnStartTimeChanging(value);
-					this.SendPropertyChanging();
-					this._StartTime = value;
-					this.SendPropertyChanged("StartTime");
-					this.OnStartTimeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EndTime", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string EndTime
-		{
-			get
-			{
-				return this._EndTime;
-			}
-			set
-			{
-				if ((this._EndTime != value))
-				{
-					this.OnEndTimeChanging(value);
-					this.SendPropertyChanging();
-					this._EndTime = value;
-					this.SendPropertyChanged("EndTime");
-					this.OnEndTimeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date", DbType="Date NOT NULL")]
-		public System.DateTime Date
-		{
-			get
-			{
-				return this._Date;
-			}
-			set
-			{
-				if ((this._Date != value))
-				{
-					this.OnDateChanging(value);
-					this.SendPropertyChanging();
-					this._Date = value;
-					this.SendPropertyChanged("Date");
-					this.OnDateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostType", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
-		public string PostType
-		{
-			get
-			{
-				return this._PostType;
-			}
-			set
-			{
-				if ((this._PostType != value))
-				{
-					this.OnPostTypeChanging(value);
-					this.SendPropertyChanging();
-					this._PostType = value;
-					this.SendPropertyChanged("PostType");
-					this.OnPostTypeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserId", DbType="Int NOT NULL")]
-		public int UserId
-		{
-			get
-			{
-				return this._UserId;
-			}
-			set
-			{
-				if ((this._UserId != value))
-				{
-					if (this._User.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnUserIdChanging(value);
-					this.SendPropertyChanging();
-					this._UserId = value;
-					this.SendPropertyChanged("UserId");
-					this.OnUserIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Dept_Post", Storage="_Dept", ThisKey="DeptName", OtherKey="DeptName", IsForeignKey=true)]
-		public Dept Dept
-		{
-			get
-			{
-				return this._Dept.Entity;
-			}
-			set
-			{
-				Dept previousValue = this._Dept.Entity;
-				if (((previousValue != value) 
-							|| (this._Dept.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Dept.Entity = null;
-						previousValue.Posts.Remove(this);
-					}
-					this._Dept.Entity = value;
-					if ((value != null))
-					{
-						value.Posts.Add(this);
-						this._DeptName = value.DeptName;
-					}
-					else
-					{
-						this._DeptName = default(string);
-					}
-					this.SendPropertyChanged("Dept");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Course_Post", Storage="_Course", ThisKey="CourseName", OtherKey="CourseName", IsForeignKey=true)]
-		public Course Course
-		{
-			get
-			{
-				return this._Course.Entity;
-			}
-			set
-			{
-				Course previousValue = this._Course.Entity;
-				if (((previousValue != value) 
-							|| (this._Course.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Course.Entity = null;
-						previousValue.Posts.Remove(this);
-					}
-					this._Course.Entity = value;
-					if ((value != null))
-					{
-						value.Posts.Add(this);
-						this._CourseName = value.CourseName;
-					}
-					else
-					{
-						this._CourseName = default(string);
-					}
-					this.SendPropertyChanged("Course");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User_Post", Storage="_User", ThisKey="UserId", OtherKey="UserId", IsForeignKey=true)]
-		public User User
-		{
-			get
-			{
-				return this._User.Entity;
-			}
-			set
-			{
-				User previousValue = this._User.Entity;
-				if (((previousValue != value) 
-							|| (this._User.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._User.Entity = null;
-						previousValue.Posts.Remove(this);
-					}
-					this._User.Entity = value;
-					if ((value != null))
-					{
-						value.Posts.Add(this);
-						this._UserId = value.UserId;
-					}
-					else
-					{
-						this._UserId = default(int);
-					}
-					this.SendPropertyChanged("User");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Skill")]
-	public partial class Skill : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _SkillId;
-		
-		private string _SkillName;
-		
-		private int _UserId;
-		
-		private EntityRef<User> _User;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnSkillIdChanging(int value);
-    partial void OnSkillIdChanged();
-    partial void OnSkillNameChanging(string value);
-    partial void OnSkillNameChanged();
-    partial void OnUserIdChanging(int value);
-    partial void OnUserIdChanged();
-    #endregion
-		
-		public Skill()
-		{
-			this._User = default(EntityRef<User>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SkillId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int SkillId
-		{
-			get
-			{
-				return this._SkillId;
-			}
-			set
-			{
-				if ((this._SkillId != value))
-				{
-					this.OnSkillIdChanging(value);
-					this.SendPropertyChanging();
-					this._SkillId = value;
-					this.SendPropertyChanged("SkillId");
-					this.OnSkillIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SkillName", DbType="VarChar(50)")]
-		public string SkillName
-		{
-			get
-			{
-				return this._SkillName;
-			}
-			set
-			{
-				if ((this._SkillName != value))
-				{
-					this.OnSkillNameChanging(value);
-					this.SendPropertyChanging();
-					this._SkillName = value;
-					this.SendPropertyChanged("SkillName");
-					this.OnSkillNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserId", DbType="Int NOT NULL")]
-		public int UserId
-		{
-			get
-			{
-				return this._UserId;
-			}
-			set
-			{
-				if ((this._UserId != value))
-				{
-					if (this._User.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnUserIdChanging(value);
-					this.SendPropertyChanging();
-					this._UserId = value;
-					this.SendPropertyChanged("UserId");
-					this.OnUserIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User_Skill", Storage="_User", ThisKey="UserId", OtherKey="UserId", IsForeignKey=true)]
-		public User User
-		{
-			get
-			{
-				return this._User.Entity;
-			}
-			set
-			{
-				User previousValue = this._User.Entity;
-				if (((previousValue != value) 
-							|| (this._User.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._User.Entity = null;
-						previousValue.Skills.Remove(this);
-					}
-					this._User.Entity = value;
-					if ((value != null))
-					{
-						value.Skills.Add(this);
-						this._UserId = value.UserId;
-					}
-					else
-					{
-						this._UserId = default(int);
-					}
-					this.SendPropertyChanged("User");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+				return this.GetTable<Course>();
 			}
 		}
 	}
@@ -1050,9 +166,9 @@ namespace TutorHub
 		
 		private string _SkypeId;
 		
-		private EntitySet<Post> _Posts;
-		
 		private EntitySet<Skill> _Skills;
+		
+		private EntitySet<Post> _Posts;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1104,8 +220,8 @@ namespace TutorHub
 		
 		public User()
 		{
-			this._Posts = new EntitySet<Post>(new Action<Post>(this.attach_Posts), new Action<Post>(this.detach_Posts));
 			this._Skills = new EntitySet<Skill>(new Action<Skill>(this.attach_Skills), new Action<Skill>(this.detach_Skills));
+			this._Posts = new EntitySet<Post>(new Action<Post>(this.attach_Posts), new Action<Post>(this.detach_Posts));
 			OnCreated();
 		}
 		
@@ -1529,6 +645,19 @@ namespace TutorHub
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User_Skill", Storage="_Skills", ThisKey="UserId", OtherKey="UserId")]
+		public EntitySet<Skill> Skills
+		{
+			get
+			{
+				return this._Skills;
+			}
+			set
+			{
+				this._Skills.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User_Post", Storage="_Posts", ThisKey="UserId", OtherKey="UserId")]
 		public EntitySet<Post> Posts
 		{
@@ -1542,16 +671,697 @@ namespace TutorHub
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User_Skill", Storage="_Skills", ThisKey="UserId", OtherKey="UserId")]
-		public EntitySet<Skill> Skills
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Skills(Skill entity)
+		{
+			this.SendPropertyChanging();
+			entity.User = this;
+		}
+		
+		private void detach_Skills(Skill entity)
+		{
+			this.SendPropertyChanging();
+			entity.User = null;
+		}
+		
+		private void attach_Posts(Post entity)
+		{
+			this.SendPropertyChanging();
+			entity.User = this;
+		}
+		
+		private void detach_Posts(Post entity)
+		{
+			this.SendPropertyChanging();
+			entity.User = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Skill")]
+	public partial class Skill : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _SkillId;
+		
+		private string _SkillName;
+		
+		private int _UserId;
+		
+		private EntityRef<User> _User;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnSkillIdChanging(int value);
+    partial void OnSkillIdChanged();
+    partial void OnSkillNameChanging(string value);
+    partial void OnSkillNameChanged();
+    partial void OnUserIdChanging(int value);
+    partial void OnUserIdChanged();
+    #endregion
+		
+		public Skill()
+		{
+			this._User = default(EntityRef<User>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SkillId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int SkillId
 		{
 			get
 			{
-				return this._Skills;
+				return this._SkillId;
 			}
 			set
 			{
-				this._Skills.Assign(value);
+				if ((this._SkillId != value))
+				{
+					this.OnSkillIdChanging(value);
+					this.SendPropertyChanging();
+					this._SkillId = value;
+					this.SendPropertyChanged("SkillId");
+					this.OnSkillIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SkillName", DbType="VarChar(50)")]
+		public string SkillName
+		{
+			get
+			{
+				return this._SkillName;
+			}
+			set
+			{
+				if ((this._SkillName != value))
+				{
+					this.OnSkillNameChanging(value);
+					this.SendPropertyChanging();
+					this._SkillName = value;
+					this.SendPropertyChanged("SkillName");
+					this.OnSkillNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserId", DbType="Int NOT NULL")]
+		public int UserId
+		{
+			get
+			{
+				return this._UserId;
+			}
+			set
+			{
+				if ((this._UserId != value))
+				{
+					if (this._User.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnUserIdChanging(value);
+					this.SendPropertyChanging();
+					this._UserId = value;
+					this.SendPropertyChanged("UserId");
+					this.OnUserIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User_Skill", Storage="_User", ThisKey="UserId", OtherKey="UserId", IsForeignKey=true)]
+		public User User
+		{
+			get
+			{
+				return this._User.Entity;
+			}
+			set
+			{
+				User previousValue = this._User.Entity;
+				if (((previousValue != value) 
+							|| (this._User.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._User.Entity = null;
+						previousValue.Skills.Remove(this);
+					}
+					this._User.Entity = value;
+					if ((value != null))
+					{
+						value.Skills.Add(this);
+						this._UserId = value.UserId;
+					}
+					else
+					{
+						this._UserId = default(int);
+					}
+					this.SendPropertyChanged("User");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Post")]
+	public partial class Post : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _PId;
+		
+		private string _DeptName;
+		
+		private string _CourseName;
+		
+		private string _PostTitle;
+		
+		private string _Topic;
+		
+		private string _StartTime;
+		
+		private string _EndTime;
+		
+		private System.DateTime _Date;
+		
+		private string _PostType;
+		
+		private int _UserId;
+		
+		private EntityRef<User> _User;
+		
+		private EntityRef<Dept> _Dept;
+		
+		private EntityRef<Course> _Course;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPIdChanging(int value);
+    partial void OnPIdChanged();
+    partial void OnDeptNameChanging(string value);
+    partial void OnDeptNameChanged();
+    partial void OnCourseNameChanging(string value);
+    partial void OnCourseNameChanged();
+    partial void OnPostTitleChanging(string value);
+    partial void OnPostTitleChanged();
+    partial void OnTopicChanging(string value);
+    partial void OnTopicChanged();
+    partial void OnStartTimeChanging(string value);
+    partial void OnStartTimeChanged();
+    partial void OnEndTimeChanging(string value);
+    partial void OnEndTimeChanged();
+    partial void OnDateChanging(System.DateTime value);
+    partial void OnDateChanged();
+    partial void OnPostTypeChanging(string value);
+    partial void OnPostTypeChanged();
+    partial void OnUserIdChanging(int value);
+    partial void OnUserIdChanged();
+    #endregion
+		
+		public Post()
+		{
+			this._User = default(EntityRef<User>);
+			this._Dept = default(EntityRef<Dept>);
+			this._Course = default(EntityRef<Course>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int PId
+		{
+			get
+			{
+				return this._PId;
+			}
+			set
+			{
+				if ((this._PId != value))
+				{
+					this.OnPIdChanging(value);
+					this.SendPropertyChanging();
+					this._PId = value;
+					this.SendPropertyChanged("PId");
+					this.OnPIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeptName", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string DeptName
+		{
+			get
+			{
+				return this._DeptName;
+			}
+			set
+			{
+				if ((this._DeptName != value))
+				{
+					if (this._Dept.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnDeptNameChanging(value);
+					this.SendPropertyChanging();
+					this._DeptName = value;
+					this.SendPropertyChanged("DeptName");
+					this.OnDeptNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CourseName", DbType="VarChar(80) NOT NULL", CanBeNull=false)]
+		public string CourseName
+		{
+			get
+			{
+				return this._CourseName;
+			}
+			set
+			{
+				if ((this._CourseName != value))
+				{
+					if (this._Course.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnCourseNameChanging(value);
+					this.SendPropertyChanging();
+					this._CourseName = value;
+					this.SendPropertyChanged("CourseName");
+					this.OnCourseNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostTitle", DbType="VarChar(160) NOT NULL", CanBeNull=false)]
+		public string PostTitle
+		{
+			get
+			{
+				return this._PostTitle;
+			}
+			set
+			{
+				if ((this._PostTitle != value))
+				{
+					this.OnPostTitleChanging(value);
+					this.SendPropertyChanging();
+					this._PostTitle = value;
+					this.SendPropertyChanged("PostTitle");
+					this.OnPostTitleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Topic", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string Topic
+		{
+			get
+			{
+				return this._Topic;
+			}
+			set
+			{
+				if ((this._Topic != value))
+				{
+					this.OnTopicChanging(value);
+					this.SendPropertyChanging();
+					this._Topic = value;
+					this.SendPropertyChanged("Topic");
+					this.OnTopicChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartTime", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string StartTime
+		{
+			get
+			{
+				return this._StartTime;
+			}
+			set
+			{
+				if ((this._StartTime != value))
+				{
+					this.OnStartTimeChanging(value);
+					this.SendPropertyChanging();
+					this._StartTime = value;
+					this.SendPropertyChanged("StartTime");
+					this.OnStartTimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EndTime", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string EndTime
+		{
+			get
+			{
+				return this._EndTime;
+			}
+			set
+			{
+				if ((this._EndTime != value))
+				{
+					this.OnEndTimeChanging(value);
+					this.SendPropertyChanging();
+					this._EndTime = value;
+					this.SendPropertyChanged("EndTime");
+					this.OnEndTimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date", DbType="Date NOT NULL")]
+		public System.DateTime Date
+		{
+			get
+			{
+				return this._Date;
+			}
+			set
+			{
+				if ((this._Date != value))
+				{
+					this.OnDateChanging(value);
+					this.SendPropertyChanging();
+					this._Date = value;
+					this.SendPropertyChanged("Date");
+					this.OnDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostType", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string PostType
+		{
+			get
+			{
+				return this._PostType;
+			}
+			set
+			{
+				if ((this._PostType != value))
+				{
+					this.OnPostTypeChanging(value);
+					this.SendPropertyChanging();
+					this._PostType = value;
+					this.SendPropertyChanged("PostType");
+					this.OnPostTypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserId", DbType="Int NOT NULL")]
+		public int UserId
+		{
+			get
+			{
+				return this._UserId;
+			}
+			set
+			{
+				if ((this._UserId != value))
+				{
+					if (this._User.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnUserIdChanging(value);
+					this.SendPropertyChanging();
+					this._UserId = value;
+					this.SendPropertyChanged("UserId");
+					this.OnUserIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User_Post", Storage="_User", ThisKey="UserId", OtherKey="UserId", IsForeignKey=true)]
+		public User User
+		{
+			get
+			{
+				return this._User.Entity;
+			}
+			set
+			{
+				User previousValue = this._User.Entity;
+				if (((previousValue != value) 
+							|| (this._User.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._User.Entity = null;
+						previousValue.Posts.Remove(this);
+					}
+					this._User.Entity = value;
+					if ((value != null))
+					{
+						value.Posts.Add(this);
+						this._UserId = value.UserId;
+					}
+					else
+					{
+						this._UserId = default(int);
+					}
+					this.SendPropertyChanged("User");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Dept_Post", Storage="_Dept", ThisKey="DeptName", OtherKey="DeptName", IsForeignKey=true)]
+		public Dept Dept
+		{
+			get
+			{
+				return this._Dept.Entity;
+			}
+			set
+			{
+				Dept previousValue = this._Dept.Entity;
+				if (((previousValue != value) 
+							|| (this._Dept.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Dept.Entity = null;
+						previousValue.Posts.Remove(this);
+					}
+					this._Dept.Entity = value;
+					if ((value != null))
+					{
+						value.Posts.Add(this);
+						this._DeptName = value.DeptName;
+					}
+					else
+					{
+						this._DeptName = default(string);
+					}
+					this.SendPropertyChanged("Dept");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Course_Post", Storage="_Course", ThisKey="CourseName", OtherKey="CourseName", IsForeignKey=true)]
+		public Course Course
+		{
+			get
+			{
+				return this._Course.Entity;
+			}
+			set
+			{
+				Course previousValue = this._Course.Entity;
+				if (((previousValue != value) 
+							|| (this._Course.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Course.Entity = null;
+						previousValue.Posts.Remove(this);
+					}
+					this._Course.Entity = value;
+					if ((value != null))
+					{
+						value.Posts.Add(this);
+						this._CourseName = value.CourseName;
+					}
+					else
+					{
+						this._CourseName = default(string);
+					}
+					this.SendPropertyChanged("Course");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Dept")]
+	public partial class Dept : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _DeptId;
+		
+		private string _DeptName;
+		
+		private EntitySet<Post> _Posts;
+		
+		private EntitySet<Course> _Courses;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnDeptIdChanging(int value);
+    partial void OnDeptIdChanged();
+    partial void OnDeptNameChanging(string value);
+    partial void OnDeptNameChanged();
+    #endregion
+		
+		public Dept()
+		{
+			this._Posts = new EntitySet<Post>(new Action<Post>(this.attach_Posts), new Action<Post>(this.detach_Posts));
+			this._Courses = new EntitySet<Course>(new Action<Course>(this.attach_Courses), new Action<Course>(this.detach_Courses));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeptId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int DeptId
+		{
+			get
+			{
+				return this._DeptId;
+			}
+			set
+			{
+				if ((this._DeptId != value))
+				{
+					this.OnDeptIdChanging(value);
+					this.SendPropertyChanging();
+					this._DeptId = value;
+					this.SendPropertyChanged("DeptId");
+					this.OnDeptIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeptName", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string DeptName
+		{
+			get
+			{
+				return this._DeptName;
+			}
+			set
+			{
+				if ((this._DeptName != value))
+				{
+					this.OnDeptNameChanging(value);
+					this.SendPropertyChanging();
+					this._DeptName = value;
+					this.SendPropertyChanged("DeptName");
+					this.OnDeptNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Dept_Post", Storage="_Posts", ThisKey="DeptName", OtherKey="DeptName")]
+		public EntitySet<Post> Posts
+		{
+			get
+			{
+				return this._Posts;
+			}
+			set
+			{
+				this._Posts.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Dept_Course", Storage="_Courses", ThisKey="DeptId", OtherKey="DeptId")]
+		public EntitySet<Course> Courses
+		{
+			get
+			{
+				return this._Courses;
+			}
+			set
+			{
+				this._Courses.Assign(value);
 			}
 		}
 		
@@ -1578,89 +1388,170 @@ namespace TutorHub
 		private void attach_Posts(Post entity)
 		{
 			this.SendPropertyChanging();
-			entity.User = this;
+			entity.Dept = this;
 		}
 		
 		private void detach_Posts(Post entity)
 		{
 			this.SendPropertyChanging();
-			entity.User = null;
+			entity.Dept = null;
 		}
 		
-		private void attach_Skills(Skill entity)
+		private void attach_Courses(Course entity)
 		{
 			this.SendPropertyChanging();
-			entity.User = this;
+			entity.Dept = this;
 		}
 		
-		private void detach_Skills(Skill entity)
+		private void detach_Courses(Course entity)
 		{
 			this.SendPropertyChanging();
-			entity.User = null;
+			entity.Dept = null;
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Verification")]
-	public partial class Verification : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Course")]
+	public partial class Course : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _Email;
+		private int _CourseId;
 		
-		private int _VerificationCode;
+		private int _DeptId;
+		
+		private string _CourseName;
+		
+		private EntitySet<Post> _Posts;
+		
+		private EntityRef<Dept> _Dept;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnEmailChanging(string value);
-    partial void OnEmailChanged();
-    partial void OnVerificationCodeChanging(int value);
-    partial void OnVerificationCodeChanged();
+    partial void OnCourseIdChanging(int value);
+    partial void OnCourseIdChanged();
+    partial void OnDeptIdChanging(int value);
+    partial void OnDeptIdChanged();
+    partial void OnCourseNameChanging(string value);
+    partial void OnCourseNameChanged();
     #endregion
 		
-		public Verification()
+		public Course()
 		{
+			this._Posts = new EntitySet<Post>(new Action<Post>(this.attach_Posts), new Action<Post>(this.detach_Posts));
+			this._Dept = default(EntityRef<Dept>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string Email
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CourseId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int CourseId
 		{
 			get
 			{
-				return this._Email;
+				return this._CourseId;
 			}
 			set
 			{
-				if ((this._Email != value))
+				if ((this._CourseId != value))
 				{
-					this.OnEmailChanging(value);
+					this.OnCourseIdChanging(value);
 					this.SendPropertyChanging();
-					this._Email = value;
-					this.SendPropertyChanged("Email");
-					this.OnEmailChanged();
+					this._CourseId = value;
+					this.SendPropertyChanged("CourseId");
+					this.OnCourseIdChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VerificationCode", DbType="Int NOT NULL")]
-		public int VerificationCode
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeptId", DbType="Int NOT NULL")]
+		public int DeptId
 		{
 			get
 			{
-				return this._VerificationCode;
+				return this._DeptId;
 			}
 			set
 			{
-				if ((this._VerificationCode != value))
+				if ((this._DeptId != value))
 				{
-					this.OnVerificationCodeChanging(value);
+					if (this._Dept.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnDeptIdChanging(value);
 					this.SendPropertyChanging();
-					this._VerificationCode = value;
-					this.SendPropertyChanged("VerificationCode");
-					this.OnVerificationCodeChanged();
+					this._DeptId = value;
+					this.SendPropertyChanged("DeptId");
+					this.OnDeptIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CourseName", DbType="VarChar(80) NOT NULL", CanBeNull=false)]
+		public string CourseName
+		{
+			get
+			{
+				return this._CourseName;
+			}
+			set
+			{
+				if ((this._CourseName != value))
+				{
+					this.OnCourseNameChanging(value);
+					this.SendPropertyChanging();
+					this._CourseName = value;
+					this.SendPropertyChanged("CourseName");
+					this.OnCourseNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Course_Post", Storage="_Posts", ThisKey="CourseName", OtherKey="CourseName")]
+		public EntitySet<Post> Posts
+		{
+			get
+			{
+				return this._Posts;
+			}
+			set
+			{
+				this._Posts.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Dept_Course", Storage="_Dept", ThisKey="DeptId", OtherKey="DeptId", IsForeignKey=true)]
+		public Dept Dept
+		{
+			get
+			{
+				return this._Dept.Entity;
+			}
+			set
+			{
+				Dept previousValue = this._Dept.Entity;
+				if (((previousValue != value) 
+							|| (this._Dept.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Dept.Entity = null;
+						previousValue.Courses.Remove(this);
+					}
+					this._Dept.Entity = value;
+					if ((value != null))
+					{
+						value.Courses.Add(this);
+						this._DeptId = value.DeptId;
+					}
+					else
+					{
+						this._DeptId = default(int);
+					}
+					this.SendPropertyChanged("Dept");
 				}
 			}
 		}
@@ -1683,6 +1574,18 @@ namespace TutorHub
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_Posts(Post entity)
+		{
+			this.SendPropertyChanging();
+			entity.Course = this;
+		}
+		
+		private void detach_Posts(Post entity)
+		{
+			this.SendPropertyChanging();
+			entity.Course = null;
 		}
 	}
 }

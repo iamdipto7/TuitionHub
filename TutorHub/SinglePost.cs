@@ -33,6 +33,9 @@ namespace TutorHub
             metroLabel9.Text = p.Date.ToString();
             metroLabel7.Text = p.CourseName;
             metroLabel8.Text = p.Topic;
+            lblUserID.Text = Convert.ToString(p.UserId);
+            lblUserID.Visible = false;
+
 
             TutorHubDataContext tdc = new TutorHubDataContext(Login.Instance.connection);
 
@@ -58,7 +61,27 @@ namespace TutorHub
 
         }
 
+        private void metroLink1_Click(object sender, EventArgs e)
+        {
+          
+            //int x = Convert.ToInt32(this.lblUserID.Text);
+
+            //TutorHubDataContext tdc = new TutorHubDataContext(Login.Instance.connection);
+            //var poster = from y in tdc.Users
+            //             where y.UserId == x
+            //             select y;
+            
 
 
+           ViewProfile.Instance.ViewOtherProfile(int.Parse(this.lblUserID.Text));
+
+
+
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            MetroFramework.MetroMessageBox.Show(this, lblUserID.Text);
+        }
     }
 }
