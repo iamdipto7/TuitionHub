@@ -31,7 +31,13 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelNav = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.homePage1 = new TutorHub.HomePage();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panelMain.SuspendLayout();
+            this.panelNav.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -52,6 +58,7 @@
             // 
             // panelMain
             // 
+            this.panelMain.Controls.Add(this.homePage1);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(3, 58);
             this.panelMain.Name = "panelMain";
@@ -60,11 +67,50 @@
             // 
             // panelNav
             // 
+            this.panelNav.Controls.Add(this.button3);
+            this.panelNav.Controls.Add(this.button2);
+            this.panelNav.Controls.Add(this.button1);
             this.panelNav.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelNav.Location = new System.Drawing.Point(3, 3);
             this.panelNav.Name = "panelNav";
             this.panelNav.Size = new System.Drawing.Size(1161, 49);
             this.panelNav.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(481, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(195, 43);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(3, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(55, 43);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(963, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(195, 43);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // homePage1
+            // 
+            this.homePage1.Location = new System.Drawing.Point(203, -2);
+            this.homePage1.Margin = new System.Windows.Forms.Padding(4);
+            this.homePage1.Name = "homePage1";
+            this.homePage1.Size = new System.Drawing.Size(744, 285);
+            this.homePage1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -81,6 +127,8 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.panelMain.ResumeLayout(false);
+            this.panelNav.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -90,6 +138,10 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Panel panelNav;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private HomePage homePage1;
     }
 }
 

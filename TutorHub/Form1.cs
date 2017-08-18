@@ -60,9 +60,10 @@ namespace TutorHub
 
                 panelMain.Controls.Add(AddPostPage.Instance);
                 AddPostPage.Instance.Dock = DockStyle.Fill;
-               
-                
 
+
+                panelMain.Controls.Add(EditProfilePanel.Instance);
+                EditProfilePanel.Instance.Dock = DockStyle.Fill;
 
 
                 Login.Instance.BringToFront();
@@ -88,6 +89,13 @@ namespace TutorHub
                 HomePage.Instance.metroTile1.BackColor = Color.LightSkyBlue;
                 HomePage.Instance.metroTile1.Refresh();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //home button navbar
+
+
         }
     }
 }

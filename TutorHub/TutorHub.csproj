@@ -91,6 +91,12 @@
     <Compile Include="Editprofile.Designer.cs">
       <DependentUpon>Editprofile.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditProfilePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditProfilePanel.Designer.cs">
+      <DependentUpon>EditProfilePanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Email.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Editprofile.resx">
       <DependentUpon>Editprofile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditProfilePanel.resx">
+      <DependentUpon>EditProfilePanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Email.resx">
       <DependentUpon>Email.cs</DependentUpon>
