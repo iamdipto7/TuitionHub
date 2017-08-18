@@ -83,3 +83,6 @@ F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.ViewPost.resources
 F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.Editprofile.resources
 F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.RecoverPassForm.resources
 F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.home.resources
+F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.Editprofile.resources
+F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.home.resources
+F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.RecoverPassForm.resources
