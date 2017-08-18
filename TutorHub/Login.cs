@@ -37,6 +37,8 @@ namespace TutorHub
             SignUp signUp = new SignUp();
             
             signUp.Show();
+
+
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
@@ -56,6 +58,12 @@ namespace TutorHub
                 loggedInUser = tdc.Users.SingleOrDefault(x => x.UserName == txtUserName.Text && x.Password == txtLoginPass.Text);
                 Form1.Instance.LoggedInUser = loggedInUser;
                 HomePage.Instance.BringToFront();
+
+               
+
+
+
+
             }
             
             else
