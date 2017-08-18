@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelNav = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -38,43 +40,50 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tableLayoutPanel1.Controls.Add(this.panelMain, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panelNav, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 74);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(15, 60);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.931419F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.06858F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1167, 627);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(875, 510);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panelMain
             // 
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(3, 58);
+            this.panelMain.Location = new System.Drawing.Point(2, 47);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1161, 566);
+            this.panelMain.Size = new System.Drawing.Size(871, 461);
             this.panelMain.TabIndex = 0;
             // 
             // panelNav
             // 
             this.panelNav.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelNav.Location = new System.Drawing.Point(3, 3);
+            this.panelNav.Location = new System.Drawing.Point(2, 2);
+            this.panelNav.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelNav.Name = "panelNav";
-            this.panelNav.Size = new System.Drawing.Size(1161, 49);
+            this.panelNav.Size = new System.Drawing.Size(871, 41);
             this.panelNav.TabIndex = 1;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1207, 721);
+            this.ClientSize = new System.Drawing.Size(905, 586);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
-            this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
+            this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Resizable = false;
             this.Text = "Form1";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -90,6 +99,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Panel panelNav;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

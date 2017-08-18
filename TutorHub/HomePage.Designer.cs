@@ -100,17 +100,21 @@
             // metroTile1
             // 
             this.metroTile1.ActiveControl = null;
+            this.metroTile1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.metroTile1.Location = new System.Drawing.Point(468, 119);
             this.metroTile1.Name = "metroTile1";
             this.metroTile1.Size = new System.Drawing.Size(194, 94);
             this.metroTile1.TabIndex = 6;
             this.metroTile1.Text = "View Post";
+            this.metroTile1.UseCustomBackColor = true;
+            this.metroTile1.UseCustomForeColor = true;
             this.metroTile1.UseSelectable = true;
+            this.metroTile1.UseStyleColors = true;
             this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
             // 
             // timer1
             // 
-            this.timer1.Interval = 200;
+            this.timer1.Interval = 2000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // HomePage
