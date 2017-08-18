@@ -87,3 +87,4 @@ F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.Editprofile.resou
 F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.home.resources
 F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.RecoverPassForm.resources
 F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.EditProfilePanel.resources
+F:\FinalProject\TutionHub\TutorHub\obj\Debug\TutorHub.EditProfilePanel.resources

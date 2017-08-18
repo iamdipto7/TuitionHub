@@ -16,5 +16,10 @@ namespace TutorHub
         {
             InitializeComponent();
         }
+
+        private void metroTile6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
