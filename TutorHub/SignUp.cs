@@ -13,9 +13,9 @@ namespace TutorHub
     public partial class SignUp : MetroFramework.Forms.MetroForm
     {
         User newUser;
-        //public string connection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\OneDrive\Project Final\TutorHub\TutorHub\TutorHubDatabase.mdf;Integrated Security = True; Connect Timeout = 30";
+        public string connection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\OneDrive\Project Final\TutorHub\TutorHub\TutorHubDatabase.mdf;Integrated Security = True; Connect Timeout = 30";
 
-        public string connection = @"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\FinalProject\TutionHub\TutorHub\TutorHubDatabase.mdf;Integrated Security = True; Connect Timeout = 30";
+        //public string connection = @"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\FinalProject\TutionHub\TutorHub\TutorHubDatabase.mdf;Integrated Security = True; Connect Timeout = 30";
         public User NewUser
         {
             get

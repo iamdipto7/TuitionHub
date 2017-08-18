@@ -186,10 +186,10 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.postTitleLnk);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(0, 0, 0, 4);
             this.Name = "SinglePost";
             this.Padding = new System.Windows.Forms.Padding(2);
-            this.Size = new System.Drawing.Size(852, 344);
+            this.Size = new System.Drawing.Size(1130, 344);
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.UseCustomBackColor = true;
             this.UseCustomForeColor = true;

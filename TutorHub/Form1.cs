@@ -43,21 +43,22 @@ namespace TutorHub
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (!this.Controls.Contains(Login.Instance))
+
+            if (!panelMain.Controls.Contains(Login.Instance))
             {
-                this.Controls.Add(Login.Instance);
+                panelMain.Controls.Add(Login.Instance);
                 Login.Instance.Dock = DockStyle.Fill;
 
-                this.Controls.Add(HomePage.Instance);
+                panelMain.Controls.Add(HomePage.Instance);
                 HomePage.Instance.Dock = DockStyle.Fill;
 
-                this.Controls.Add(ViewProfile.Instance);
+                panelMain.Controls.Add(ViewProfile.Instance);
                 ViewProfile.Instance.Dock = DockStyle.Fill;
 
-                this.Controls.Add(ViewPost.Instance);
+                panelMain.Controls.Add(ViewPost.Instance);
                 ViewPost.Instance.Dock = DockStyle.Fill;
 
-                this.Controls.Add(AddPostPage.Instance);
+                panelMain.Controls.Add(AddPostPage.Instance);
                 AddPostPage.Instance.Dock = DockStyle.Fill;
                
                 

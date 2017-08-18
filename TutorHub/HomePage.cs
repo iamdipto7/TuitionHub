@@ -50,7 +50,21 @@ namespace TutorHub
 
         private void metroTile6_Click(object sender, EventArgs e)
         {
+            //view profile 
 
+            ViewProfile.Instance.lblName.Text = Form1.Instance.LoggedInUser.UserName;
+            ViewProfile.Instance.BringToFront();
+
+        }
+
+        private void tileCreatePost_Click(object sender, EventArgs e)
+        {
+            AddPostPage.Instance.BringToFront();
+        }
+
+        private void tileViewPost_Click(object sender, EventArgs e)
+        {
+            ViewPost.Instance.BringToFront();
         }
     }
 }
