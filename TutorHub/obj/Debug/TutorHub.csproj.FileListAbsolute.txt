@@ -34,7 +34,6 @@ F:\OneDrive\Project Final\TutorHub\TutorHub\bin\Debug\MetroFramework.dll
 F:\OneDrive\Project Final\TutorHub\TutorHub\bin\Debug\MetroFramework.Fonts.dll
 F:\OneDrive\Project Final\TutorHub\TutorHub\bin\Debug\Newtonsoft.Json.dll
 F:\OneDrive\Project Final\TutorHub\TutorHub\bin\Debug\S22.Imap.dll
-F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.csprojResolveAssemblyReference.cache
 F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.AddPostPage.resources
 F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.Email.resources
 F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.Form1.resources
@@ -87,3 +86,4 @@ F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.Editprofile.resou
 F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.home.resources
 F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.RecoverPassForm.resources
 F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.EditProfilePanel.resources
+F:\OneDrive\Project Final\TutorHub\TutorHub\obj\Debug\TutorHub.csprojResolveAssemblyReference.cache

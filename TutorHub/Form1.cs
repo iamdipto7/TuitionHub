@@ -14,6 +14,7 @@ namespace TutorHub
     {
 
         public User LoggedInUser;
+        int i = 0;
 
         private static Form1 instance;
         public static Form1 Instance
@@ -95,7 +96,23 @@ namespace TutorHub
         {
             //home button navbar
 
-
+            
+            
+            if (i == 0)
+            {
+                home1.BringToFront();
+                i++;
+            }
+            else
+            {
+                home1.SendToBack();
+                
+                i--;
+            }
+                
+                
+            
+            //homePage1.Visible = true;
         }
     }
 }

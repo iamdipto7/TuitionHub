@@ -34,7 +34,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.homePage1 = new TutorHub.HomePage();
+            this.home1 = new TutorHub.home();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.panelNav.SuspendLayout();
@@ -58,7 +58,8 @@
             // 
             // panelMain
             // 
-            this.panelMain.Controls.Add(this.homePage1);
+            this.panelMain.BackColor = System.Drawing.SystemColors.Control;
+            this.panelMain.Controls.Add(this.home1);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(3, 58);
             this.panelMain.Name = "panelMain";
@@ -67,6 +68,7 @@
             // 
             // panelNav
             // 
+            this.panelNav.BackColor = System.Drawing.SystemColors.Control;
             this.panelNav.Controls.Add(this.button3);
             this.panelNav.Controls.Add(this.button2);
             this.panelNav.Controls.Add(this.button1);
@@ -104,13 +106,14 @@
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // homePage1
+            // home1
             // 
-            this.homePage1.Location = new System.Drawing.Point(203, -2);
-            this.homePage1.Margin = new System.Windows.Forms.Padding(4);
-            this.homePage1.Name = "homePage1";
-            this.homePage1.Size = new System.Drawing.Size(744, 285);
-            this.homePage1.TabIndex = 0;
+            this.home1.Location = new System.Drawing.Point(256, 4);
+            this.home1.Margin = new System.Windows.Forms.Padding(4);
+            this.home1.Name = "home1";
+            this.home1.Size = new System.Drawing.Size(659, 304);
+            this.home1.TabIndex = 1;
+            this.home1.UseSelectable = true;
             // 
             // Form1
             // 
@@ -118,12 +121,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1207, 721);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
             this.Resizable = false;
             this.Text = "Form1";
-            this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Theme = MetroFramework.MetroThemeStyle.Default;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -141,7 +145,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private HomePage homePage1;
+        private home home1;
     }
 }
 

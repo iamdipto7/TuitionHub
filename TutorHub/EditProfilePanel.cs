@@ -36,7 +36,7 @@ namespace TutorHub
             flowPanel.HorizontalScroll.Maximum = 0;
             flowPanel.AutoScroll = true;
 
-            flowPanel.Controls.Add(Editprofile.Instance);
+            
         }
 
         private void flowPanel_Paint(object sender, PaintEventArgs e)

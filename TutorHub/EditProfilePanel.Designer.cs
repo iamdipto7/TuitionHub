@@ -73,6 +73,6 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowPanel;
+        public System.Windows.Forms.FlowLayoutPanel flowPanel;
     }
 }
