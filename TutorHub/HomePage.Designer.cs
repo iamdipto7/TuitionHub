@@ -41,9 +41,10 @@
             // metroTile6
             // 
             this.metroTile6.ActiveControl = null;
-            this.metroTile6.Location = new System.Drawing.Point(220, 119);
+            this.metroTile6.Location = new System.Drawing.Point(293, 146);
+            this.metroTile6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTile6.Name = "metroTile6";
-            this.metroTile6.Size = new System.Drawing.Size(141, 190);
+            this.metroTile6.Size = new System.Drawing.Size(188, 234);
             this.metroTile6.TabIndex = 11;
             this.metroTile6.Text = "profile";
             this.metroTile6.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -60,19 +61,22 @@
             // metroTile5
             // 
             this.metroTile5.ActiveControl = null;
-            this.metroTile5.Location = new System.Drawing.Point(367, 219);
+            this.metroTile5.Location = new System.Drawing.Point(489, 270);
+            this.metroTile5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTile5.Name = "metroTile5";
-            this.metroTile5.Size = new System.Drawing.Size(95, 90);
+            this.metroTile5.Size = new System.Drawing.Size(127, 111);
             this.metroTile5.TabIndex = 10;
             this.metroTile5.Text = "edit profile";
             this.metroTile5.UseSelectable = true;
+            this.metroTile5.Click += new System.EventHandler(this.metroTile5_Click);
             // 
             // metroTile4
             // 
             this.metroTile4.ActiveControl = null;
-            this.metroTile4.Location = new System.Drawing.Point(367, 119);
+            this.metroTile4.Location = new System.Drawing.Point(489, 146);
+            this.metroTile4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(95, 94);
+            this.metroTile4.Size = new System.Drawing.Size(127, 116);
             this.metroTile4.TabIndex = 9;
             this.metroTile4.Text = "Create post";
             this.metroTile4.UseSelectable = true;
@@ -80,9 +84,10 @@
             // metroTile3
             // 
             this.metroTile3.ActiveControl = null;
-            this.metroTile3.Location = new System.Drawing.Point(563, 219);
+            this.metroTile3.Location = new System.Drawing.Point(751, 270);
+            this.metroTile3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(99, 90);
+            this.metroTile3.Size = new System.Drawing.Size(132, 111);
             this.metroTile3.TabIndex = 8;
             this.metroTile3.Text = "Log Out";
             this.metroTile3.UseSelectable = true;
@@ -90,9 +95,10 @@
             // metroTile2
             // 
             this.metroTile2.ActiveControl = null;
-            this.metroTile2.Location = new System.Drawing.Point(468, 219);
+            this.metroTile2.Location = new System.Drawing.Point(624, 270);
+            this.metroTile2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(89, 90);
+            this.metroTile2.Size = new System.Drawing.Size(119, 111);
             this.metroTile2.TabIndex = 7;
             this.metroTile2.Text = "my posts";
             this.metroTile2.UseSelectable = true;
@@ -100,26 +106,23 @@
             // metroTile1
             // 
             this.metroTile1.ActiveControl = null;
-            this.metroTile1.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.metroTile1.Location = new System.Drawing.Point(468, 119);
+            this.metroTile1.Location = new System.Drawing.Point(624, 146);
+            this.metroTile1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(194, 94);
+            this.metroTile1.Size = new System.Drawing.Size(259, 116);
             this.metroTile1.TabIndex = 6;
             this.metroTile1.Text = "View Post";
-            this.metroTile1.UseCustomBackColor = true;
-            this.metroTile1.UseCustomForeColor = true;
             this.metroTile1.UseSelectable = true;
-            this.metroTile1.UseStyleColors = true;
             this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
             // 
             // timer1
             // 
-            this.timer1.Interval = 2000;
+            this.timer1.Interval = 200;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.metroTile6);
             this.Controls.Add(this.metroTile5);
@@ -127,8 +130,9 @@
             this.Controls.Add(this.metroTile3);
             this.Controls.Add(this.metroTile2);
             this.Controls.Add(this.metroTile1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HomePage";
-            this.Size = new System.Drawing.Size(875, 446);
+            this.Size = new System.Drawing.Size(1167, 549);
             this.Load += new System.EventHandler(this.HomePage_Load);
             this.ResumeLayout(false);
 

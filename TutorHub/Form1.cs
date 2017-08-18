@@ -44,8 +44,6 @@ namespace TutorHub
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            timer1.Start();
-            
             if (!panelMain.Controls.Contains(Login.Instance))
             {
                 panelMain.Controls.Add(Login.Instance);
@@ -62,6 +60,12 @@ namespace TutorHub
 
                 panelMain.Controls.Add(AddPostPage.Instance);
                 AddPostPage.Instance.Dock = DockStyle.Fill;
+
+
+                panelMain.Controls.Add(EditProfilePanel.Instance);
+                EditProfilePanel.Instance.Dock = DockStyle.Fill;
+
+
                 Login.Instance.BringToFront();
             }
             else
@@ -75,8 +79,7 @@ namespace TutorHub
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
-            if (HomePage.Instance.metroTile1.BackColor == Color.LightSkyBlue)
+            if(HomePage.Instance.metroTile1.BackColor== Color.LightSkyBlue)
             {
                 HomePage.Instance.metroTile1.BackColor = Color.YellowGreen;
                 HomePage.Instance.metroTile1.Refresh();
@@ -86,6 +89,12 @@ namespace TutorHub
                 HomePage.Instance.metroTile1.BackColor = Color.LightSkyBlue;
                 HomePage.Instance.metroTile1.Refresh();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //home button navbar
+
 
         }
     }

@@ -77,5 +77,10 @@ namespace TutorHub
         {
             timer1.Start();
         }
+
+        private void metroTile5_Click(object sender, EventArgs e)
+        {
+            EditProfilePanel.Instance.BringToFront();
+        }
     }
 }

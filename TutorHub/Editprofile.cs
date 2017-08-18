@@ -12,6 +12,16 @@ namespace TutorHub
 {
     public partial class Editprofile : UserControl
     {
+        private static Editprofile instance;
+        public static Editprofile Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new Editprofile();
+                return instance;
+            }
+        }
         public Editprofile()
         {
             InitializeComponent();
@@ -28,6 +38,11 @@ namespace TutorHub
         }
 
         private void metroButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Editprofile_Load(object sender, EventArgs e)
         {
 
         }
