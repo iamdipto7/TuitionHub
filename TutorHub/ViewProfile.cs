@@ -282,7 +282,7 @@ namespace TutorHub
                 lblName.Text = profile.FirstName + " " + profile.LastName + "( " + profile.UserName + " )";
             }
 
-            if (profile.ToString()== null)
+            if (profile.DOB == null)
             {
                 lblDOB.Text = "Not provded";
 

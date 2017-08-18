@@ -14,7 +14,8 @@ namespace TutorHub
     {
 
         public User LoggedInUser;
-        int i = 0;
+        public int i = 0;
+        public bool status = false;
 
         private static Form1 instance;
         public static Form1 Instance
@@ -71,11 +72,13 @@ namespace TutorHub
             }
             else
                 Login.Instance.BringToFront();
+
+            
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -95,24 +98,23 @@ namespace TutorHub
         private void button1_Click(object sender, EventArgs e)
         {
             //home button navbar
-
-            
-            
-            if (i == 0)
+            if(status==false)
             {
-                home1.BringToFront();
+                MessageBox.Show("You are not logged in!");
+            }
+            else if(i == 0)
+            {
                 i++;
+                home1.BringToFront();
+                
+                
             }
             else
             {
-                home1.SendToBack();
-                
                 i--;
+               home1.SendToBack();
+                HomePage.Instance.BringToFront();
             }
-                
-                
-            
-            //homePage1.Visible = true;
         }
     }
 }

@@ -16,6 +16,7 @@ namespace TutorHub
     public partial class Email : MetroFramework.Forms.MetroForm
     {
         static Email f;
+        public string receive,sender,senderUsername;
         public Email()
         {
             InitializeComponent();
@@ -24,51 +25,22 @@ namespace TutorHub
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            var message = new MailMessage(txtEmail.Text, txtRecepient.Text);
-            message.Subject = txtSubject.Text;
-            message.Body = txtBody.Text;
+            var message = new MailMessage("tutorhubsystem@gmail.com", receive);
+            message.Subject =  txtSubject.Text;
+            message.Body = "From: "+sender+"\nTutorHub UserName: "+senderUsername+"\n"+txtBody.Text;
 
             using (SmtpClient mailer = new SmtpClient("smtp.gmail.com", 587))
             {
-                mailer.Credentials = new NetworkCredential(txtEmail.Text, txtPass.Text);
+                mailer.Credentials = new NetworkCredential("tutorhubsystem@gmail.com", "c#project");
                 mailer.EnableSsl = true;
                 mailer.Send(message);
             }
-            txtRecepient.Text = null;
+            MetroFramework.MetroMessageBox.Show(this,"Email Has been send!");
             txtSubject.Text = null;
             txtBody.Text = null;
         }
 
-        private void btnReceive_Click(object sender, EventArgs e)
-        {
-            StartReceiving();
-
-        }
-
-        private void StartReceiving()
-        {
-            Task.Run(() =>
-            {
-                using (ImapClient client = new ImapClient("imap.gmail.com", 993, txtEmail.Text, txtPass.Text, AuthMethod.Login, true))
-                {
-                    if(client.Supports("IDLE")==false)
-                    {
-                        MessageBox.Show("Server does not support IMAP IDLE");
-                        return;
-                    }
-                    client.NewMessage += new EventHandler<IdleMessageEventArgs>(OnNewMessage);
-                    while (true) ;
-                }
-            });
-        }
-        static void OnNewMessage(Object sender, IdleMessageEventArgs e)
-        {
-            MessageBox.Show("New Message received!");
-            MailMessage m = e.Client.GetMessage(e.MessageUID, FetchOptions.Normal);
-            f.Invoke((MethodInvoker)delegate
-            {
-                f.txtReceive.AppendText("From: " + m.From + "\n" + "Subject: " + m.Subject + "\n" + "Body: " + m.Body + "\n");
-            });
-        }
+        
+        
     }
 }

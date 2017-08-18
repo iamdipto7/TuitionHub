@@ -29,34 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.metroTile6 = new MetroFramework.Controls.MetroTile();
             this.metroTile5 = new MetroFramework.Controls.MetroTile();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.metroTile6 = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
-            // 
-            // metroTile6
-            // 
-            this.metroTile6.ActiveControl = null;
-            this.metroTile6.Location = new System.Drawing.Point(293, 146);
-            this.metroTile6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.metroTile6.Name = "metroTile6";
-            this.metroTile6.Size = new System.Drawing.Size(188, 234);
-            this.metroTile6.TabIndex = 11;
-            this.metroTile6.Text = "profile";
-            this.metroTile6.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTile6.TileImage = global::TutorHub.Properties.Resources.Screenshot__27_1;
-            this.metroTile6.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile6.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile6.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.metroTile6.UseCustomBackColor = true;
-            this.metroTile6.UseCustomForeColor = true;
-            this.metroTile6.UseSelectable = true;
-            this.metroTile6.UseTileImage = true;
-            this.metroTile6.Click += new System.EventHandler(this.metroTile6_Click);
             // 
             // metroTile5
             // 
@@ -80,6 +60,7 @@
             this.metroTile4.TabIndex = 9;
             this.metroTile4.Text = "Create post";
             this.metroTile4.UseSelectable = true;
+            this.metroTile4.Click += new System.EventHandler(this.metroTile4_Click);
             // 
             // metroTile3
             // 
@@ -91,6 +72,7 @@
             this.metroTile3.TabIndex = 8;
             this.metroTile3.Text = "Log Out";
             this.metroTile3.UseSelectable = true;
+            this.metroTile3.Click += new System.EventHandler(this.metroTile3_Click);
             // 
             // metroTile2
             // 
@@ -119,6 +101,26 @@
             // 
             this.timer1.Interval = 200;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // metroTile6
+            // 
+            this.metroTile6.ActiveControl = null;
+            this.metroTile6.Location = new System.Drawing.Point(293, 146);
+            this.metroTile6.Margin = new System.Windows.Forms.Padding(4);
+            this.metroTile6.Name = "metroTile6";
+            this.metroTile6.Size = new System.Drawing.Size(188, 234);
+            this.metroTile6.TabIndex = 11;
+            this.metroTile6.Text = "profile";
+            this.metroTile6.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTile6.TileImage = global::TutorHub.Properties.Resources.Screenshot__27_1;
+            this.metroTile6.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile6.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile6.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.metroTile6.UseCustomBackColor = true;
+            this.metroTile6.UseCustomForeColor = true;
+            this.metroTile6.UseSelectable = true;
+            this.metroTile6.UseTileImage = true;
+            this.metroTile6.Click += new System.EventHandler(this.metroTile6_Click);
             // 
             // HomePage
             // 
