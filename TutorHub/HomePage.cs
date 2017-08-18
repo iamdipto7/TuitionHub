@@ -84,5 +84,18 @@ namespace TutorHub
             EditProfilePanel.Instance.flowPanel.Controls.Add(new Editprofile());
             EditProfilePanel.Instance.BringToFront();
         }
+
+        private void metroTile4_Click(object sender, EventArgs e)
+        {
+            //create post
+            AddPostPage.Instance.BringToFront();
+        }
+
+        private void metroTile3_Click(object sender, EventArgs e)
+        {
+            Form1.Instance.LoggedInUser = null;
+            Form1.Instance.status = false;
+            Login.Instance.BringToFront();
+        }
     }
 }

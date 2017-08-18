@@ -57,9 +57,9 @@ namespace TutorHub
             {
                 loggedInUser = tdc.Users.SingleOrDefault(x => x.UserName == txtUserName.Text && x.Password == txtLoginPass.Text);
                 Form1.Instance.LoggedInUser = loggedInUser;
-                HomePage.Instance.BringToFront();
 
-               
+                Form1.Instance.status = true;
+                HomePage.Instance.BringToFront();
 
 
 
@@ -77,6 +77,7 @@ namespace TutorHub
                 {
                     loggedInUser = tdc.Users.SingleOrDefault(x => x.Email == txtUserName.Text && x.Password == txtLoginPass.Text);
                     Form1.Instance.LoggedInUser = loggedInUser;
+                    Form1.Instance.status = true;
                     HomePage.Instance.BringToFront();
                 }
 
@@ -142,6 +143,7 @@ namespace TutorHub
             {
                 loggedInUser = tdc.Users.SingleOrDefault(x => x.GoogleId == u.GoogleId);
                 Form1.Instance.LoggedInUser = loggedInUser;
+                Form1.Instance.status = true;
                 HomePage.Instance.BringToFront();
             }
             else

@@ -30,11 +30,11 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.panelNav = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.home1 = new TutorHub.home();
+            this.panelNav = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.panelNav.SuspendLayout();
@@ -66,6 +66,17 @@
             this.panelMain.Size = new System.Drawing.Size(1161, 566);
             this.panelMain.TabIndex = 0;
             // 
+            // home1
+            // 
+            this.home1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.home1.Location = new System.Drawing.Point(256, 4);
+            this.home1.Margin = new System.Windows.Forms.Padding(4);
+            this.home1.Name = "home1";
+            this.home1.Size = new System.Drawing.Size(659, 304);
+            this.home1.TabIndex = 1;
+            this.home1.UseCustomBackColor = true;
+            this.home1.UseSelectable = true;
+            // 
             // panelNav
             // 
             this.panelNav.BackColor = System.Drawing.SystemColors.Control;
@@ -78,42 +89,36 @@
             this.panelNav.Size = new System.Drawing.Size(1161, 49);
             this.panelNav.TabIndex = 1;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(481, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(195, 43);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(3, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(55, 43);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // button3
             // 
+            this.button3.Font = new System.Drawing.Font("Segoe Print", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(963, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(195, 43);
             this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
+            this.button3.Text = "User";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // home1
+            // button2
             // 
-            this.home1.Location = new System.Drawing.Point(256, 4);
-            this.home1.Margin = new System.Windows.Forms.Padding(4);
-            this.home1.Name = "home1";
-            this.home1.Size = new System.Drawing.Size(659, 304);
-            this.home1.TabIndex = 1;
-            this.home1.UseSelectable = true;
+            this.button2.Font = new System.Drawing.Font("Segoe Print", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(3, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(146, 43);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Back";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe Script", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(481, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(195, 43);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "TutorHub";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -140,12 +145,12 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Panel panelNav;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private home home1;
+        public home home1;
+        public System.Windows.Forms.Panel panelMain;
+        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Button button1;
     }
 }
 

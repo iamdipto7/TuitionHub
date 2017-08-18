@@ -81,7 +81,26 @@ namespace TutorHub
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            MetroFramework.MetroMessageBox.Show(this, lblUserID.Text);
+            //contact 
+            //if(Form1.Instance.LoggedInUser.Email == null)
+            //{
+
+            //}
+            //Email emailPage = new Email();
+            //Form1.Instance.panelMain.Controls.Add(emailPage);
+            //emailPage.Dock = DockStyle.Fill;
+            //emailPage.BringToFront();
+
+            TutorHubDataContext tdc = new TutorHubDataContext(Login.Instance.connection);
+            var poster = from y in tdc.Users
+                       where y.UserId == int.Parse(lblUserID.Text)
+                       select y;
+
+            Email emailPage = new Email();
+            emailPage.Show();
+            emailPage.receive = poster.SingleOrDefault().Email;
+            emailPage.sender = Form1.Instance.LoggedInUser.Email;
+            emailPage.senderUsername = Form1.Instance.LoggedInUser.UserName;
         }
     }
 }
